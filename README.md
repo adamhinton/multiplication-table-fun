@@ -51,6 +51,7 @@ MVP:
 -[]highly accessible and semantic
 
 +Styling:
+-Use Styled Components
 []Use similar header, colors and fonts to pokemon project
 []Make tables simple and sleek
 []Dark Mode
