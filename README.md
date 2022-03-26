@@ -41,18 +41,26 @@ MVP:
 []Header
 []Main body
 []SingleTableQuiz
--Users fill in the answers on this one
+-Displays numbers to be multiplied, but
 []SingleTableDisplay
 -This shows all the answers
 []NumberSelectForm
 -User fills this out to select what numbers they want in the table
 
+[]HTML:
+-[]highly accessible and semantic
+
 +Styling:
+-Use Styled Components
 []Use similar header, colors and fonts to pokemon project
 []Make tables simple and sleek
 []Dark Mode
+[]responsive design (flexbox)
 
 +Features:
+[]Two display options:
+-[]One is quiz where the user has to fill in the answers.
+-[]the other option simply statically displays the number in the selected mult table.
 []User can fill out which numbers to display
 
 +Testing:
@@ -62,3 +70,7 @@ MVP:
 []User can make account
 []Backend remembers user tables saved in account
 []display facts under each number where possible: NumberAPI, PokeAPI
+[]Relational databases store user info with SQL/Express/Node
+-[]one table for users: userID, username, email, password(encrypted)
+-[]one table for numbers: a column for base number, multiplier, and which userID it belongs to
+[]front end calls on the database API when user logs in to find which numbers they saved
