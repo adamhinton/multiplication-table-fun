@@ -41,18 +41,25 @@ MVP:
 []Header
 []Main body
 []SingleTableQuiz
--Users fill in the answers on this one
+-Displays numbers to be multiplied, but
 []SingleTableDisplay
 -This shows all the answers
 []NumberSelectForm
 -User fills this out to select what numbers they want in the table
 
+[]HTML:
+-[]highly accessible and semantic
+
 +Styling:
 []Use similar header, colors and fonts to pokemon project
 []Make tables simple and sleek
 []Dark Mode
+[]responsive design (flexbox)
 
 +Features:
+[]Two display options:
+-[]One is quiz where the user has to fill in the answers.
+-[]the other option simply statically displays the number in the selected mult table.
 []User can fill out which numbers to display
 
 +Testing:
