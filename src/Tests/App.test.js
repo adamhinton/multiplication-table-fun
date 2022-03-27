@@ -1,5 +1,5 @@
 import { render, screen } from "@testing-library/react";
-import App from "./App";
+import App from "../App";
 
 test("[1] Sanity checks", () => {
   const twoPlusTwo = 2 + 2;
