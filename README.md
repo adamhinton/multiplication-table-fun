@@ -63,14 +63,24 @@ MVP:
 -[]the other option simply statically displays the number in the selected mult table.
 []User can fill out which numbers to display
 
++Routing:
+[] use React Router
+-This will be more important when backend is built out, that will come later on
+
 +Testing:
 [X] Robust unit testing suite
 
 +Stretch Goals:
 []User can make account
+-use JWT
 []Backend remembers user tables saved in account
 []display facts under each number where possible: NumberAPI, PokeAPI
 []Relational databases store user info with SQL/Express/Node
 -[]one table for users: userID, username, email, password(encrypted)
 -[]one table for numbers: a column for base number, multiplier, and which userID it belongs to
 []front end calls on the database API when user logs in to find which numbers they saved
+
+[]Build React Router pages for:
+-[]login
+-[]registration
+-[]account management (Private Route)
