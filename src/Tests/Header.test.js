@@ -8,6 +8,6 @@ test("[1] Renders without errors", () => {
 test("[2] h1 displays properly", () => {
   render(<Header />);
 
-  const h1 = screen.getByText(/Hello World!/i);
+  const h1 = screen.getByText(/multiplication table fun/i);
   expect(h1).toBeInTheDocument();
 });
