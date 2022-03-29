@@ -17,6 +17,7 @@ export default Header;
 const StyHeader = styled.header`
   background-color: rgb(46, 37, 37);
   color: rgb(221, 203, 203);
+  display: flex;
 `;
 
 const StyH1 = styled.h1`
