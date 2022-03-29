@@ -1,4 +1,6 @@
 import styled from "styled-components";
+import linksArray from "../utils/HeaderUtils/linksArray";
+import linkMaker from "../utils/HeaderUtils/linkMaker";
 
 const Header = (props) => {
   return (
