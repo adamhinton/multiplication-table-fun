@@ -4,6 +4,7 @@ const Header = (props) => {
   return (
     <StyHeader>
       <StyH1>Multiplication Table Fun</StyH1>
+      <h2>Author: Adam Hinton</h2>
     </StyHeader>
   );
 };
