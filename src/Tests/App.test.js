@@ -10,9 +10,3 @@ test("[1] Sanity checks", () => {
 test("[2] Renders without errors", () => {
   render(<App />);
 });
-
-test("[3] Renders learn react link", () => {
-  render(<App />);
-  const linkElement = screen.getByText(/Hello World/i);
-  expect(linkElement).toBeInTheDocument();
-});
