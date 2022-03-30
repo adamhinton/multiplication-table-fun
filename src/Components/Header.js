@@ -27,7 +27,9 @@ const StyH1 = styled.h1`
 `;
 
 const StyNav = styled.nav`
+  display: flex;
+
   a {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
 `;
