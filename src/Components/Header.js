@@ -20,6 +20,7 @@ const StyHeader = styled.header`
   color: rgb(221, 203, 203);
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   width: 100%;
 `;
 
