@@ -7,7 +7,7 @@ const Header = (props) => {
     <StyHeader>
       <StyH1>Multiplication Table Fun</StyH1>
       <h2>Author: Adam Hinton</h2>
-      <nav>{linkMaker(linksArray)}</nav>
+      <StyNav>{linkMaker(linksArray)}</StyNav>
     </StyHeader>
   );
 };
@@ -24,4 +24,10 @@ const StyHeader = styled.header`
 
 const StyH1 = styled.h1`
   width: 15%;
+`;
+
+const StyNav = styled.nav`
+  a {
+    font-size: 2rem;
+  }
 `;
