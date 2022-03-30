@@ -8,6 +8,7 @@ const Header = (props) => {
       <StyH1>Multiplication Table Fun</StyH1>
       <h2>Author: Adam Hinton</h2>
       <StyNav>{linkMaker(linksArray)}</StyNav>
+      <div>Dark Mode (PH)</div>
     </StyHeader>
   );
 };
