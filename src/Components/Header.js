@@ -18,6 +18,7 @@ const StyHeader = styled.header`
   background-color: rgb(46, 37, 37);
   color: rgb(221, 203, 203);
   display: flex;
+  justify-content: space-between;
   width: 100%;
 `;
 
