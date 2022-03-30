@@ -14,5 +14,5 @@ test("[2] h1, h2 and dark mode button display properly", () => {
 
   expect(h1).toBeInTheDocument();
   expect(h2).toBeInTheDocument();
-  expect(darkBtn).toBeInTheDocument;
+  expect(darkBtn).toBeInTheDocument();
 });
