@@ -21,7 +21,6 @@ const StyHeader = styled.header`
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  width: 100%;
 `;
 
 const StyH1 = styled.h1`
