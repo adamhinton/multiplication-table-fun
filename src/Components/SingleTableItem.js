@@ -1,13 +1,13 @@
 import styled from "styled-components";
 
 const SingleTableItem = (props) => {
-  return (
-    <article>
-      <div> 1 x 1 = 1</div>
-      <div> 1 x 2 = 2</div>
-      <div> 1 x 3 = 3</div>
-    </article>
-  );
+  return <StySingleTableItem>1 + 1 = 2</StySingleTableItem>;
 };
 
 export default SingleTableItem;
+
+const StySingleTableItem = styled.article`
+  background-color: #bef8f8;
+  color: black;
+  margin-bottom: 1%;
+`;
