@@ -23,7 +23,7 @@ const StyHeader = styled.header`
   flex-wrap: wrap;
   align-items: center;
   font-size: 1rem;
-  padding: 0 5%;
+  //todo: determine what's good left-right padding
 `;
 
 const StyH1 = styled.h1`
@@ -35,7 +35,7 @@ const Styh2 = styled.h2``;
 
 const StyNav = styled.nav`
   display: flex;
-
+  flex-direction: column;
   a {
   }
 `;
