@@ -24,3 +24,9 @@ test("[2] Display limit input and label appear in document", () => {
   expect(multiplierLabel).toBeInTheDocument();
   expect(multiplierInput).toBeInTheDocument();
 });
+
+test("[2] Submit Button appears in document", () => {
+  render(<DisplayOptionsForm />);
+
+  const submitBtn = screen.getByTestId("form-submit-button");
+});
