@@ -6,9 +6,9 @@ const Header = (props) => {
   return (
     <StyHeader>
       <StyH1>Multiplication Table Fun</StyH1>
-      <h2>Author: Adam Hinton</h2>
+      <Styh2>Author: Adam Hinton</Styh2>
       <StyNav>{linkMaker(linksArray)}</StyNav>
-      <div>Dark Mode (PH)</div>
+      <StyDarkMode>Dark Mode (PH)</StyDarkMode>
     </StyHeader>
   );
 };
@@ -21,16 +21,27 @@ const StyHeader = styled.header`
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  align-items: center;
+  font-size: 1rem;
 `;
 
 const StyH1 = styled.h1`
   width: 15%;
+  font-size: 1.5rem;
+`;
+
+const Styh2 = styled.h2`
+  /* font-size: 1.5rem; */
 `;
 
 const StyNav = styled.nav`
   display: flex;
 
   a {
-    font-size: 1.5rem;
+    /* font-size: 1.5rem; */
   }
+`;
+
+const StyDarkMode = styled.div`
+  /* font-size: 1.5rem; */
 `;
