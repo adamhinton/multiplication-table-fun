@@ -4,10 +4,10 @@ const DisplayOptionsForm = (props) => {
   return (
     <StyForm>
       <div>
-        <StyLabel htmlFor="quantity" data-testid="form-label">
+        <StyLabel htmlFor="quantity" data-testid="multiplier-label">
           Multiplier:
         </StyLabel>
-        <input type="number"></input>
+        <input type="number" data-testid="multiplier-input"></input>
       </div>
 
       <div>
