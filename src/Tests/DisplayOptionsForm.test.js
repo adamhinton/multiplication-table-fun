@@ -8,8 +8,8 @@ test("[1] Renders without errors", () => {
 test("[2] multiplier input and label appear in document", () => {
   render(<DisplayOptionsForm />);
 
-  const multiplierLabel = screen.getAllByTestId("multiplier-label");
-  const multiplierInput = screen.getAllByTestId("multiplier-input");
+  const multiplierLabel = screen.getByTestId("multiplier-label");
+  const multiplierInput = screen.getByTestId("multiplier-input");
 
   expect(multiplierLabel).toBeInTheDocument();
   expect(multiplierInput).toBeInTheDocument();
