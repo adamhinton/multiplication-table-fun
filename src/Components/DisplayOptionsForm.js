@@ -18,7 +18,7 @@ const DisplayOptionsForm = (props) => {
       </div>
 
       <div>
-        <input type="submit" data-testid="form-submit"></input>
+        <input type="submit" data-testid="form-submit-button"></input>
       </div>
     </StyForm>
   );
