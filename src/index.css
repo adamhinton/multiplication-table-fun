@@ -3,3 +3,7 @@
   box-sizing: border-box;
   color: rgb(221, 203, 203);
 }
+
+body {
+  background-color: #3c9893;
+}
