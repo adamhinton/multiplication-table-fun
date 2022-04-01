@@ -23,7 +23,8 @@ const StyHeader = styled.header`
   flex-wrap: wrap;
   align-items: center;
   font-size: 1rem;
-  //todo: determine what's good left-right padding
+  //TODO: probably make this padding bigger for larger screens
+  padding: 0 5%;
 `;
 
 const StyH1 = styled.h1`
