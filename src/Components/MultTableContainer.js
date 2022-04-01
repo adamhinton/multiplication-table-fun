@@ -3,10 +3,15 @@ import SingleTableItem from "./SingleTableItem";
 
 const MultTableContainer = (props) => {
   return (
-    <section>
+    <StyledTableContainer>
       <SingleTableItem />
-    </section>
+    </StyledTableContainer>
   );
 };
 
 export default MultTableContainer;
+
+const StyledTableContainer = styled.section`
+  display: flex;
+  justify-content: center;
+`;
