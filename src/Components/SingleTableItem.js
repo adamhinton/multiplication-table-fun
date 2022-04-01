@@ -9,5 +9,5 @@ export default SingleTableItem;
 const StySingleTableItem = styled.article`
   background-color: #bef8f8;
   color: black;
-  margin-bottom: 1%;
+  padding: 2% 20%;
 `;
