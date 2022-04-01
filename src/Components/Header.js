@@ -23,6 +23,7 @@ const StyHeader = styled.header`
   flex-wrap: wrap;
   align-items: center;
   font-size: 1rem;
+  padding: 0 5%;
 `;
 
 const StyH1 = styled.h1`
@@ -30,18 +31,13 @@ const StyH1 = styled.h1`
   font-size: 1.5rem;
 `;
 
-const Styh2 = styled.h2`
-  /* font-size: 1.5rem; */
-`;
+const Styh2 = styled.h2``;
 
 const StyNav = styled.nav`
   display: flex;
 
   a {
-    /* font-size: 1.5rem; */
   }
 `;
 
-const StyDarkMode = styled.div`
-  /* font-size: 1.5rem; */
-`;
+const StyDarkMode = styled.div``;
