@@ -11,7 +11,7 @@ const MultTableContainer = (props) => {
 
 export default MultTableContainer;
 
-const StyledTableContainer = styled.section`
+const StyledTableContainer = styled.main`
   display: flex;
   justify-content: center;
   margin-top: 5%;
