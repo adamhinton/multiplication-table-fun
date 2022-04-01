@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const DisplayOptionsForm = (props) => {
-  return <div>Blah Blah Blah</div>;
+  return <form></form>;
 };
 
 export default DisplayOptionsForm;
