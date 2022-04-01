@@ -9,3 +9,5 @@ const MultTableContainer = (props) => {
     </section>
   );
 };
+
+export default MultTableContainer;
