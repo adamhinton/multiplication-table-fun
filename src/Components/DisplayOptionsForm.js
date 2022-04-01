@@ -10,8 +10,12 @@ const DisplayOptionsForm = (props) => {
 
       <div>
         <StyLabel for="quantity">Limit:</StyLabel>
-        <input type="number" value="Max 100"></input>
+        <input type="number"></input>
       </div>
+
+      {/* <div>
+        <input type="submit"></input>
+      </div> */}
     </StyForm>
   );
 };
