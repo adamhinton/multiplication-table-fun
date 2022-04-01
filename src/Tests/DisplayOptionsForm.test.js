@@ -29,4 +29,5 @@ test("[2] Submit Button appears in document", () => {
   render(<DisplayOptionsForm />);
 
   const submitBtn = screen.getByTestId("form-submit-button");
+  expect(submitBtn).toBeInTheDocument();
 });
