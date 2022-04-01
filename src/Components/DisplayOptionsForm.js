@@ -13,9 +13,9 @@ const DisplayOptionsForm = (props) => {
         <input type="number"></input>
       </div>
 
-      {/* <div>
+      <div>
         <input type="submit"></input>
-      </div> */}
+      </div>
     </StyForm>
   );
 };
