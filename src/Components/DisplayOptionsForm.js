@@ -2,11 +2,22 @@ import styled from "styled-components";
 
 const DisplayOptionsForm = (props) => {
   return (
-    <form>
-      <label>Multiplier:</label>
+    <StyForm>
+      <StyLabel>Multiplier:</StyLabel>
       <input type="text"></input>
-    </form>
+    </StyForm>
   );
 };
 
 export default DisplayOptionsForm;
+
+const StyForm = styled.form`
+  background-color: #bef8f8;
+  display: flex;
+  justify-content: center;
+  padding-top: 2%;
+`;
+
+const StyLabel = styled.label`
+  color: black;
+`;
