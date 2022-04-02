@@ -5,7 +5,7 @@ const SingleTableItem = (props) => {
 
   return (
     <StySingleTableItem>
-      {toBeMultiplied} x {currentMultiplier} =
+      {toBeMultiplied} x {currentMultiplier} ={" "}
       {toBeMultiplied * currentMultiplier}
     </StySingleTableItem>
   );
