@@ -31,7 +31,7 @@ export default MultTableContainer;
 
 const StyledTableContainer = styled.main`
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  flex-direction: column;
+  /* justify-content: center; */
   /* margin-top: 5%; */
 `;
