@@ -33,6 +33,4 @@ const StyledTableContainer = styled.main`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  /* justify-content: center; */
-  /* margin-top: 5%; */
 `;
