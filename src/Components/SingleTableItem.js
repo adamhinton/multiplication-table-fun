@@ -1,7 +1,14 @@
 import styled from "styled-components";
 
 const SingleTableItem = (props) => {
-  return <StySingleTableItem>1 + 1 = 2</StySingleTableItem>;
+  const { toBeMultiplied, currentMultiplier } = props;
+
+  return (
+    <StySingleTableItem>
+      {toBeMultiplied} x {currentMultiplier} ={" "}
+      {toBeMultiplied * currentMultiplier}
+    </StySingleTableItem>
+  );
 };
 
 export default SingleTableItem;
