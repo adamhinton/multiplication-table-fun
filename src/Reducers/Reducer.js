@@ -16,6 +16,9 @@ import { createSlice, configureStore } from "@reduxjs/toolkit";
 //Actions are objects that have a type key and a payload key
 //actions should contain the smallest amount of information needed to describe what happened.
 
+//Splitting reducers:
+//Split in to different reducers in different files, organized by which part of the app they update. See the link above for more.
+
 //Example initial state: (will add more things in as I implement more functionality)
 //const initialState = {
 //     multiplier: 10,
