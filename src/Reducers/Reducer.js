@@ -25,6 +25,15 @@
 //     limit: 25,
 // }
 
+//list of actions just for my reference
+// const actionsForReferenceOnly = [
+//   {
+//     type: "NEWMULTIPLIERANDLIMIT",
+//     //payload is an array, first number is new multiplier, second is new limit
+//     payload: [4, 23],
+//   },
+// ];
+
 const initialState = {
   multiplier: 10,
   limit: 25,
