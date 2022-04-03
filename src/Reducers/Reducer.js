@@ -9,6 +9,8 @@ import { createSlice, configureStore } from "@reduxjs/toolkit";
 //-Multiplier
 //-Limit
 //-Dark Mode Preference
+//-isLoggedIn
+//-id of logged in user and their preferences
 
 //Notes:
 //Actions are objects that have a type key and a payload key
