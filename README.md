@@ -79,6 +79,7 @@ MVP:
 -[]one table for users: userID, username, email, password(encrypted)
 -[]one table for numbers: a column for base number, multiplier, and which userID it belongs to
 []front end calls on the database API when user logs in to find which numbers they saved
+[]SEO
 
 Stretch goal components:
 []Login
