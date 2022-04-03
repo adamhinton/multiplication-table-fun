@@ -51,7 +51,6 @@ const appReducer = (state = initialState, action) => {
         limit: action.payload.limit,
       };
     }
-
     default:
       return state;
   }
