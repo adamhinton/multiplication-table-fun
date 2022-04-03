@@ -25,12 +25,15 @@
 //     limit: 25,
 // }
 
-//list of actions just for my reference
+// list of actions just for my reference
 // const actionsForReferenceOnly = [
 //   {
 //     type: "NEWMULTIPLIERANDLIMIT",
 //     //payload is an array, first number is new multiplier, second is new limit
-//     payload: [4, 23],
+//     payload: {
+//       multiplier: 22,
+//       limit: 35,
+//     },
 //   },
 // ];
 
@@ -44,11 +47,9 @@ const appReducer = (state = initialState, action) => {
     case "NEWMULTIPLIERANDLIMIT": {
       return {
         ...state,
-        //payload is an array. First item is new multiplier, second item is new limit
-        multiplier: action.payload[0],
-        limit: action.payload[1],
+        multiplier: action.payload.multiplier,
+        limit: action.payload.limit,
       };
-      break;
     }
 
     default:
