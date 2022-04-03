@@ -12,3 +12,10 @@ import { createSlice, configureStore } from "@reduxjs/toolkit";
 
 //Notes:
 //Actions are objects that have a type key and a payload key
+//actions should contain the smallest amount of information needed to describe what happened.
+
+//Example initial state: (will add more things in as I implement more functionality)
+//const initialState = {
+//     multiplier: 10,
+//     limit: 25,
+// }
