@@ -42,6 +42,12 @@ const initialState = {
 const appReducer = (state = initialState, action) => {
   switch (action.type) {
     case "NEWMULTIPLIERANDLIMIT": {
+      return {
+        ...state,
+        //payload is an array. First item is new multiplier, second item is new limit
+        multiplier: action.payload[0],
+        limit: action.payload[1],
+      };
       break;
     }
 
