@@ -38,3 +38,14 @@ const initialState = {
   multiplier: 10,
   limit: 25,
 };
+
+const appReducer = (state = initialState, action) => {
+  switch (action.type) {
+    case "NEWMULTIPLIERANDLIMIT": {
+      break;
+    }
+
+    default:
+      return state;
+  }
+};
