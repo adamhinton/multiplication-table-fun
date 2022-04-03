@@ -1,4 +1,4 @@
-import { createSlice, configureStore } from "@reduxjs/toolkit";
+// import { createSlice, configureStore } from "@reduxjs/toolkit";
 
 //Pro tip: I think action.payload is the argument. Can do something like action.payload is the multiplier.
 //This seems helpful: https://redux.js.org/tutorials/fundamentals/part-3-state-actions-reducers
@@ -24,3 +24,34 @@ import { createSlice, configureStore } from "@reduxjs/toolkit";
 //     multiplier: 10,
 //     limit: 25,
 // }
+
+// list of actions just for my reference
+// const actionsForReferenceOnly = [
+//   {
+//     type: "NEWMULTIPLIERANDLIMIT",
+//     //payload is an array, first number is new multiplier, second is new limit
+//     payload: {
+//       multiplier: 22,
+//       limit: 35,
+//     },
+//   },
+// ];
+
+const initialState = {
+  multiplier: 10,
+  limit: 25,
+};
+
+const appReducer = (state = initialState, action) => {
+  switch (action.type) {
+    case "NEWMULTIPLIERANDLIMIT": {
+      return {
+        ...state,
+        multiplier: action.payload.multiplier,
+        limit: action.payload.limit,
+      };
+    }
+    default:
+      return state;
+  }
+};
