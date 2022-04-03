@@ -24,3 +24,8 @@
 //     multiplier: 10,
 //     limit: 25,
 // }
+
+const initialState = {
+  multiplier: 10,
+  limit: 25,
+};
