@@ -42,9 +42,10 @@ const initialState = {
   limit: 25,
 };
 
-const appReducer = (state = initialState, action) => {
+const tableValuesReducer = (state = initialState, action) => {
   switch (action.type) {
     case "NEWMULTIPLIERANDLIMIT": {
+      //things might need to change here based on the keys in rootReducer object, not totally sure yet
       return {
         ...state,
         multiplier: action.payload.multiplier,
@@ -52,6 +53,10 @@ const appReducer = (state = initialState, action) => {
       };
     }
     default:
-      return state;
+      return {
+        ...state,
+      };
   }
 };
+
+export default tableValuesReducer;
