@@ -2,3 +2,7 @@
 
 import { combineReducers } from "@reduxjs/toolkit";
 import tableValuesReducer from "./tableValuesSlice";
+
+const rootReducer = combineReducers({
+  tableValues: tableValuesReducer,
+});
