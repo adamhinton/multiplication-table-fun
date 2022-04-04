@@ -6,3 +6,5 @@ import tableValuesReducer from "./tableValuesSlice";
 const rootReducer = combineReducers({
   tableValues: tableValuesReducer,
 });
+
+export default rootReducer;
