@@ -5,6 +5,7 @@ import linkMaker from "../utils/HeaderUtils/linkMaker";
 const Header = (props) => {
   return (
     <StyHeader>
+      {/* TODO: Add dummy placeholder login/registration links, or at least make sure there's room for them */}
       <StyH1>Multiplication Table Fun</StyH1>
       <Styh2>Author: Adam Hinton</Styh2>
       <StyNav>{linkMaker(linksArray)}</StyNav>
