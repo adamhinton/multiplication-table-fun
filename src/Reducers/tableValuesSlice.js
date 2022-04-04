@@ -55,3 +55,5 @@ const tableValuesReducer = (state = initialState, action) => {
       return state;
   }
 };
+
+export default tableValuesReducer;
