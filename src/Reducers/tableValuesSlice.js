@@ -42,7 +42,7 @@ const initialState = {
   limit: 25,
 };
 
-const appReducer = (state = initialState, action) => {
+const tableValuesReducer = (state = initialState, action) => {
   switch (action.type) {
     case "NEWMULTIPLIERANDLIMIT": {
       return {
