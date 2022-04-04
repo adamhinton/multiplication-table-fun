@@ -2,11 +2,8 @@ import styled from "styled-components";
 import SingleTableItem from "./SingleTableItem";
 
 let toBeMultiplied = 5;
-// console.log("toBeMultiplied:", toBeMultiplied);
 let maxDisplayed = new Array(20);
-console.log("maxDisplayed:", maxDisplayed);
 for (let i = 0; i < maxDisplayed.length; i++) {
-  //   console.log("blah blah blah");
   maxDisplayed[i] = (i + 1) * toBeMultiplied;
 }
 
@@ -14,7 +11,6 @@ const MultTableContainer = (props) => {
   return (
     <StyledTableContainer>
       {maxDisplayed.map((item, index) => {
-        console.log("item:", item);
         return (
           <SingleTableItem
             key={item}
