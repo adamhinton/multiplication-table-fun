@@ -1,9 +1,11 @@
 import { createStore } from "@reduxjs/toolkit";
-import rootReducer from "./Reducer";
+import rootReducer from "./reducer";
 
 const initialState = {
-  multiplier: 10,
-  limit: 30,
+  tableValues: {
+    multiplier: 10,
+    limit: 30,
+  },
 };
 
 const store = createStore(rootReducer, initialState);
