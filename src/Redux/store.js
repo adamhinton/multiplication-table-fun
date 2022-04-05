@@ -7,8 +7,8 @@
 // (These features will be gradually added)
 //-Display Pokemon toggle
 //-Display fun fact toggle
-//-Multiplier
-//-Limit
+//-Multiplier [X]
+//-Limit [X]
 //-Dark Mode Preference
 //-isLoggedIn
 //-id of logged in user and their preferences
