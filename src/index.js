@@ -7,6 +7,8 @@ import store from "./Redux/store";
 import { Provider } from "react-redux";
 import reportWebVitals from "./reportWebVitals";
 
+console.log("Initial State:", store.getState());
+
 ReactDOM.render(
   <Provider store={store}>
     <App />
