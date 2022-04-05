@@ -18,6 +18,13 @@ store.dispatch({
   payload: { multiplier: 22, limit: 35 },
 });
 
+unsubscribe();
+
+store.dispatch({
+  type: "NEWMULTIPLIERANDLIMIT",
+  payload: { multiplier: 2342423, limit: 34 },
+});
+
 ReactDOM.render(
   <Provider store={store}>
     <App />
