@@ -1,4 +1,4 @@
-//This seems helpful: https://redux.js.org/tutorials/fundamentals/part-3-state-actions-reducers
+//I primarily used the redux documentation to build this: https://redux.js.org/tutorials/fundamentals/part-3-state-actions-reducers
 
 //Items to include in state:
 //-Display Pokemon toggle
