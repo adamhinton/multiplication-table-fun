@@ -9,6 +9,15 @@ import reportWebVitals from "./reportWebVitals";
 
 console.log("Initial State:", store.getState());
 
+const unsubscribe = store.subscribe(() =>
+  console.log("State after dispatch: ", store.getState())
+);
+
+store.dispatch({
+  type: "NEWMULTIPLIERANDLIMIT",
+  payload: { multiplier: 22, limit: 35 },
+});
+
 ReactDOM.render(
   <Provider store={store}>
     <App />
