@@ -4,6 +4,9 @@ const NEWMULTIPLIERANDLIMIT = "NEWMULTIPLIERANDLIMIT";
 //Multiplier is the number that will be multiplied, limit is the max numbers to be displayed.
 //Multiplier and limit combine to generate a multiplication table which is the point of this application.
 
+//This will not be the only reducer. I will write more as I add more features,
+//And they will be combined together in reducer.js.
+
 const tableValuesReducer = (state, action) => {
   switch (action.type) {
     case NEWMULTIPLIERANDLIMIT: {
