@@ -3,5 +3,5 @@ import rootReducer from "./Reducer";
 
 const initialState = {
   multiplier: 10,
-  limit: 25,
+  limit: 30,
 };
