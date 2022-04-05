@@ -37,12 +37,7 @@
 //   },
 // ];
 
-const initialState = {
-  multiplier: 10,
-  limit: 25,
-};
-
-const tableValuesReducer = (state = initialState, action) => {
+const tableValuesReducer = (state, action) => {
   switch (action.type) {
     case "NEWMULTIPLIERANDLIMIT": {
       //things might need to change here based on the keys in rootReducer object, not totally sure yet
