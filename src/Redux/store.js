@@ -1,6 +1,10 @@
 //I primarily used the redux documentation to build this: https://redux.js.org/tutorials/fundamentals/part-3-state-actions-reducers
 
+//This is the Redux Store. It is the brain of the operation, it holds the entirety of the app's state in one place.
+//The values in this will grow as I build out the app. I have made it scalable so should be easy to add more reducers and other features.
+
 //Items to include in state:
+// (These features will be gradually added)
 //-Display Pokemon toggle
 //-Display fun fact toggle
 //-Multiplier
