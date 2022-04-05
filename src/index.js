@@ -7,24 +7,6 @@ import store from "./Redux/store";
 import { Provider } from "react-redux";
 import reportWebVitals from "./reportWebVitals";
 
-console.log("Initial State:", store.getState());
-
-const unsubscribe = store.subscribe(() =>
-  console.log("State after dispatch: ", store.getState())
-);
-
-store.dispatch({
-  type: "NEWMULTIPLIERANDLIMIT",
-  payload: { multiplier: 22, limit: 35 },
-});
-
-unsubscribe();
-
-store.dispatch({
-  type: "NEWMULTIPLIERANDLIMIT",
-  payload: { multiplier: 2342423, limit: 34 },
-});
-
 ReactDOM.render(
   <Provider store={store}>
     <App />
