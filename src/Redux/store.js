@@ -20,6 +20,7 @@
 import { createStore } from "@reduxjs/toolkit";
 import rootReducer from "./reducer";
 
+//Initial state is self explanatory: The default values that I want state to have.
 const initialState = {
   tableValues: {
     multiplier: 10,
