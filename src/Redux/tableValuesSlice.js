@@ -3,6 +3,7 @@ const NEWMULTIPLIERANDLIMIT = "NEWMULTIPLIERANDLIMIT";
 //This updates state with values that the user inputs through DisplayOptionsForm.js.
 //Multiplier is the number that will be multiplied, limit is the max numbers to be displayed.
 //Multiplier and limit combine to generate a multiplication table which is the point of this application.
+
 const tableValuesReducer = (state, action) => {
   switch (action.type) {
     case NEWMULTIPLIERANDLIMIT: {
