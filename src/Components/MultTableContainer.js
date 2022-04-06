@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import SingleTableItem from "./SingleTableItem";
+import { useSelector } from "react-redux";
 
 let toBeMultiplied = 5;
 let maxDisplayed = new Array(20);
