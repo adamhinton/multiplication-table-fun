@@ -11,6 +11,8 @@ for (let i = 0; i < maxDisplayed.length; i++) {
 
 const MultTableContainer = (props) => {
   console.log("useSelector:", useSelector);
+  //tableValues makes the console give an error: "could not find react-redux context value; please ensure the component is wrapped in a <Provider>"
+  //This is strange because tableValues is definitely defined exactly how I want it to be. Hmmmmm.
   const tableValues = useSelector(selectTableValues);
   console.log("tableValues:", tableValues);
   return (
