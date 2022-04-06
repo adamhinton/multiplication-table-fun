@@ -4,14 +4,18 @@ import SingleTableItem from "./SingleTableItem";
 import { useSelector } from "react-redux";
 const selectTableValues = (state) => state.tableValues;
 
-let toBeMultiplied = 5;
-let maxDisplayed = new Array(20);
-for (let i = 0; i < maxDisplayed.length; i++) {
-  maxDisplayed[i] = (i + 1) * toBeMultiplied;
-}
+// let toBeMultiplied = 5;
+// let maxDisplayed = new Array(20);
 
 const MultTableContainer = (props) => {
   const tableValues = useSelector(selectTableValues);
+
+  const multiplier = tableValues.multiplier;
+  const maxDisplayed = new Array(tableValues.limit);
+  for (let i = 0; i < maxDisplayed.length; i++) {
+    maxDisplayed[i] = (i + 1) * multiplier;
+  }
+
   console.log("tableValues:", tableValues);
   return (
     <StyledTableContainer>
@@ -19,7 +23,7 @@ const MultTableContainer = (props) => {
         return (
           <SingleTableItem
             key={item}
-            toBeMultiplied={toBeMultiplied}
+            toBeMultiplied={multiplier}
             currentMultiplier={index + 1}
           />
         );
