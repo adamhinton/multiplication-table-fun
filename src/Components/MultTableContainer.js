@@ -9,6 +9,8 @@ const MultTableContainer = (props) => {
 
   const multiplier = tableValues.multiplier;
   const maxDisplayed = new Array(tableValues.limit);
+
+  //making an array that the mult table generator will map over
   for (let i = 0; i < maxDisplayed.length; i++) {
     maxDisplayed[i] = (i + 1) * multiplier;
   }
