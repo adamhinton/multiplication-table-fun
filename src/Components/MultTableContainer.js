@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import SingleTableItem from "./SingleTableItem";
+//useSelector replaces a subscribe function; it knows when state updates and updates components if needed
 import { useSelector } from "react-redux";
 const selectTableValues = (state) => state.tableValues;
 
