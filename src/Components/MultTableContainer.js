@@ -4,9 +4,6 @@ import SingleTableItem from "./SingleTableItem";
 import { useSelector } from "react-redux";
 const selectTableValues = (state) => state.tableValues;
 
-// let toBeMultiplied = 5;
-// let maxDisplayed = new Array(20);
-
 const MultTableContainer = (props) => {
   const tableValues = useSelector(selectTableValues);
 
@@ -16,7 +13,6 @@ const MultTableContainer = (props) => {
     maxDisplayed[i] = (i + 1) * multiplier;
   }
 
-  console.log("tableValues:", tableValues);
   return (
     <StyledTableContainer>
       {maxDisplayed.map((item, index) => {
