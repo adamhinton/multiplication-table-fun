@@ -1,7 +1,7 @@
 import styled from "styled-components";
 //useDispatch lets us update global state (through redux) with actions
 import { useDispatch } from "react-redux";
-import { useSelector } from "react-redux";
+// import { useSelector } from "react-redux";
 
 // saving this here so I can see the state structure, delete later
 // const initialState = {
@@ -13,9 +13,11 @@ import { useSelector } from "react-redux";
 
 // saving this here so I can see action type, delete later
 // const NEWMULTIPLIERANDLIMIT = "NEWMULTIPLIERANDLIMIT";
+const selectTableValues = (state) => state.tableValues;
 
 const DisplayOptionsForm = (props) => {
   const dispatch = useDispatch();
+  // const tableValues = useSelector(selectTableValues);
 
   const onSubmit = (e) => {
     e.preventDefault();
