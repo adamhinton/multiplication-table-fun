@@ -22,7 +22,7 @@ const DisplayOptionsForm = (props) => {
         <StyLabel htmlFor="quantity" data-testid="multiplier-label">
           Multiplier:
         </StyLabel>
-        <input
+        <StyInput
           type="number"
           name="multiplier"
           value={formValues.multiplier}
@@ -32,8 +32,8 @@ const DisplayOptionsForm = (props) => {
               multiplier: Number(e.target.value),
             });
           }}
-          data-testid="multiplier-input"
-        ></input>
+          data-testid="multiplier-StyInput"
+        ></StyInput>
       </div>
 
       <div>
@@ -44,19 +44,19 @@ const DisplayOptionsForm = (props) => {
         >
           Limit:
         </StyLabel>
-        <input
+        <StyInput
           type="number"
           name="limit"
           value={formValues.limit}
           onChange={(e) => {
             setFormValues({ ...formValues, limit: Number(e.target.value) });
           }}
-          data-testid="display-limit-input"
-        ></input>
+          data-testid="display-limit-StyInput"
+        ></StyInput>
       </div>
 
       <div>
-        <input type="submit" data-testid="form-submit-button"></input>
+        <StyInput type="submit" data-testid="form-submit-button"></StyInput>
       </div>
     </StyForm>
   );
@@ -73,5 +73,9 @@ const StyForm = styled.form`
 `;
 
 const StyLabel = styled.label`
+  color: black;
+`;
+
+const StyInput = styled.input`
   color: black;
 `;
