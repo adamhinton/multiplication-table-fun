@@ -9,6 +9,8 @@ const DisplayOptionsForm = (props) => {
   const dispatch = useDispatch();
 
   const onSubmit = (e) => {
+    //doing preventDefault leaves the user-submitted values in the form fields,
+    //which is good so they can remember their inputs.
     e.preventDefault();
     dispatch({
       type: "NEWMULTIPLIERANDLIMIT",
