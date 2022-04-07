@@ -4,6 +4,7 @@ import { useDispatch } from "react-redux";
 
 const DisplayOptionsForm = (props) => {
   const dispatch = useDispatch();
+
   return (
     <StyForm>
       <div>
