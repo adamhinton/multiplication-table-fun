@@ -1,4 +1,5 @@
 import styled from "styled-components";
+//useDispatch lets us update global state (through redux) with actions
 import { useDispatch } from "react-redux";
 
 const DisplayOptionsForm = (props) => {
