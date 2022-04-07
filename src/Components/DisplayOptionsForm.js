@@ -20,10 +20,8 @@ const DisplayOptionsForm = (props) => {
   const [formValues, setFormValues] = useState({ multiplier: 0, limit: 0 });
 
   const dispatch = useDispatch();
-  // const tableValues = useSelector(selectTableValues);
 
   const onSubmit = (e) => {
-    console.log("submitting");
     e.preventDefault();
     dispatch({
       type: "NEWMULTIPLIERANDLIMIT",
@@ -54,7 +52,6 @@ const DisplayOptionsForm = (props) => {
           type="number"
           value={formValues.multiplier}
           onChange={(e) => {
-            console.log("formValues:", formValues);
             setFormValues({
               ...formValues,
               multiplier: Number(e.target.value),
@@ -76,7 +73,6 @@ const DisplayOptionsForm = (props) => {
           type="number"
           value={formValues.limit}
           onChange={(e) => {
-            console.log("formValues:", formValues);
             setFormValues({ ...formValues, limit: Number(e.target.value) });
           }}
           data-testid="display-limit-input"
