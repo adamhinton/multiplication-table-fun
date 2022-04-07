@@ -1,24 +1,64 @@
 import styled from "styled-components";
+//useDispatch lets us update global state (through redux) with actions
+import { useDispatch } from "react-redux";
+import { useState } from "react";
 
 const DisplayOptionsForm = (props) => {
+  const [formValues, setFormValues] = useState({ multiplier: 0, limit: 0 });
+
+  const dispatch = useDispatch();
+
+  const onSubmit = (e) => {
+    //doing preventDefault leaves the user-submitted values in the form fields,
+    //which is good so they can remember their inputs.
+    e.preventDefault();
+    dispatch({
+      type: "NEWMULTIPLIERANDLIMIT",
+      payload: formValues,
+    });
+  };
+
   return (
-    <StyForm>
+    <StyForm onSubmit={onSubmit}>
       <div>
         <StyLabel htmlFor="quantity" data-testid="multiplier-label">
           Multiplier:
         </StyLabel>
-        <input type="number" data-testid="multiplier-input"></input>
+        <StyInput
+          type="number"
+          name="multiplier"
+          value={formValues.multiplier}
+          onChange={(e) => {
+            setFormValues({
+              ...formValues,
+              multiplier: Number(e.target.value),
+            });
+          }}
+          data-testid="multiplier-StyInput"
+        ></StyInput>
       </div>
 
       <div>
-        <StyLabel htmlFor="quantity" data-testid="display-limit-label">
+        <StyLabel
+          htmlFor="quantity"
+          value={formValues.limit}
+          data-testid="display-limit-label"
+        >
           Limit:
         </StyLabel>
-        <input type="number" data-testid="display-limit-input"></input>
+        <StyInput
+          type="number"
+          name="limit"
+          value={formValues.limit}
+          onChange={(e) => {
+            setFormValues({ ...formValues, limit: Number(e.target.value) });
+          }}
+          data-testid="display-limit-StyInput"
+        ></StyInput>
       </div>
 
       <div>
-        <input type="submit" data-testid="form-submit-button"></input>
+        <StyInput type="submit" data-testid="form-submit-button"></StyInput>
       </div>
     </StyForm>
   );
@@ -35,5 +75,9 @@ const StyForm = styled.form`
 `;
 
 const StyLabel = styled.label`
+  color: black;
+`;
+
+const StyInput = styled.input`
   color: black;
 `;

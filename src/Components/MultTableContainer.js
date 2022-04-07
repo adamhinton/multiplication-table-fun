@@ -1,20 +1,27 @@
 import styled from "styled-components";
 import SingleTableItem from "./SingleTableItem";
-
-let toBeMultiplied = 5;
-let maxDisplayed = new Array(20);
-for (let i = 0; i < maxDisplayed.length; i++) {
-  maxDisplayed[i] = (i + 1) * toBeMultiplied;
-}
+//useSelector replaces a subscribe function; it knows when state updates and updates components if needed
+import { useSelector } from "react-redux";
+const selectTableValues = (state) => state.tableValues;
 
 const MultTableContainer = (props) => {
+  const tableValues = useSelector(selectTableValues);
+
+  const multiplier = tableValues.multiplier;
+  const maxDisplayed = new Array(tableValues.limit);
+
+  //making an array that the mult table generator will map over
+  for (let i = 0; i < maxDisplayed.length; i++) {
+    maxDisplayed[i] = (i + 1) * multiplier;
+  }
+
   return (
     <StyledTableContainer>
       {maxDisplayed.map((item, index) => {
         return (
           <SingleTableItem
             key={item}
-            toBeMultiplied={toBeMultiplied}
+            toBeMultiplied={multiplier}
             currentMultiplier={index + 1}
           />
         );
