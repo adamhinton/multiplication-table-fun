@@ -17,6 +17,8 @@ import { useState } from "react";
 const selectTableValues = (state) => state.tableValues;
 
 const DisplayOptionsForm = (props) => {
+  const [formValues, setFormValues] = useState({multiplier: 0; limit: 0});
+
   const dispatch = useDispatch();
   // const tableValues = useSelector(selectTableValues);
 
