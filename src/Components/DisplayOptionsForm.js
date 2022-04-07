@@ -1,6 +1,7 @@
 import styled from "styled-components";
 //useDispatch lets us update global state (through redux) with actions
 import { useDispatch } from "react-redux";
+import { useState } from "react";
 // import { useSelector } from "react-redux";
 
 // saving this here so I can see the state structure, delete later
