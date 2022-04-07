@@ -55,7 +55,10 @@ const DisplayOptionsForm = (props) => {
           value={formValues.multiplier}
           onChange={(e) => {
             console.log("formValues:", formValues);
-            setFormValues({ ...formValues, multiplier: e.target.value });
+            setFormValues({
+              ...formValues,
+              multiplier: Number(e.target.value),
+            });
           }}
           data-testid="multiplier-input"
         ></input>
@@ -74,7 +77,7 @@ const DisplayOptionsForm = (props) => {
           value={formValues.limit}
           onChange={(e) => {
             console.log("formValues:", formValues);
-            setFormValues({ ...formValues, limit: e.target.value });
+            setFormValues({ ...formValues, limit: Number(e.target.value) });
           }}
           data-testid="display-limit-input"
         ></input>
