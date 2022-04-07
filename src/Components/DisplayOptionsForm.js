@@ -24,7 +24,7 @@ const DisplayOptionsForm = (props) => {
 
   const onSubmit = (e) => {
     console.log("submitting");
-    // e.preventDefault();
+    e.preventDefault();
     dispatch({
       type: "NEWMULTIPLIERANDLIMIT",
       payload: formValues,
