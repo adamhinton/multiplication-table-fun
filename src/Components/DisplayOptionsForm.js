@@ -16,6 +16,8 @@ import { useDispatch } from "react-redux";
 const DisplayOptionsForm = (props) => {
   const dispatch = useDispatch();
 
+  const onSubmit = (e) => {};
+
   // dispatch({
   //   type: "NEWMULTIPLIERANDLIMIT",
   //   payload: { multiplier: 4, limit: 1000 },
