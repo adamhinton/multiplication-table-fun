@@ -11,6 +11,7 @@ test("[1] Sanity checks", () => {
   expect(twoPlusTwo).not.toBe(5);
 });
 
+//not sure whether wrapping this is best practices since it's a unit test
 test("[2] Renders without errors", () => {
   render(
     <Provider store={store}>
