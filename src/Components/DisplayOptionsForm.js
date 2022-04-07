@@ -2,6 +2,17 @@ import styled from "styled-components";
 //useDispatch lets us update global state (through redux) with actions
 import { useDispatch } from "react-redux";
 
+// saving this here so I can see the state structure, delete later
+// const initialState = {
+//   tableValues: {
+//     multiplier: 10,
+//     limit: 30,
+//   },
+// };
+
+// saving this here so I can see action type, delete later
+// const NEWMULTIPLIERANDLIMIT = "NEWMULTIPLIERANDLIMIT";
+
 const DisplayOptionsForm = (props) => {
   const dispatch = useDispatch();
 
