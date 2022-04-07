@@ -14,7 +14,7 @@ import { useState } from "react";
 
 // saving this here so I can see action type, delete later
 // const NEWMULTIPLIERANDLIMIT = "NEWMULTIPLIERANDLIMIT";
-const selectTableValues = (state) => state.tableValues;
+// const selectTableValues = (state) => state.tableValues;
 
 const DisplayOptionsForm = (props) => {
   const [formValues, setFormValues] = useState({ multiplier: 0, limit: 0 });
@@ -23,12 +23,21 @@ const DisplayOptionsForm = (props) => {
   // const tableValues = useSelector(selectTableValues);
 
   const onSubmit = (e) => {
-    e.preventDefault();
+    console.log("submitting");
+    // e.preventDefault();
     dispatch({
       type: "NEWMULTIPLIERANDLIMIT",
-      payload: { multiplier: 55, limit: 1000 },
+      payload: formValues,
     });
   };
+
+  // const handleInput = (e) => {
+  //   console.log("e.target.value:", e.target.value);
+  //   setFormValues({
+  //     ...formValues,
+  //     multiplier: e.target.value,
+  //   });
+  // };
 
   // dispatch({
   //   type: "NEWMULTIPLIERANDLIMIT",
@@ -41,14 +50,34 @@ const DisplayOptionsForm = (props) => {
         <StyLabel htmlFor="quantity" data-testid="multiplier-label">
           Multiplier:
         </StyLabel>
-        <input type="number" data-testid="multiplier-input"></input>
+        <input
+          type="number"
+          value={formValues.multiplier}
+          onChange={(e) => {
+            console.log("formValues:", formValues);
+            setFormValues({ ...formValues, multiplier: e.target.value });
+          }}
+          data-testid="multiplier-input"
+        ></input>
       </div>
 
       <div>
-        <StyLabel htmlFor="quantity" data-testid="display-limit-label">
+        <StyLabel
+          htmlFor="quantity"
+          value={formValues.limit}
+          data-testid="display-limit-label"
+        >
           Limit:
         </StyLabel>
-        <input type="number" data-testid="display-limit-input"></input>
+        <input
+          type="number"
+          value={formValues.limit}
+          onChange={(e) => {
+            console.log("formValues:", formValues);
+            setFormValues({ ...formValues, limit: e.target.value });
+          }}
+          data-testid="display-limit-input"
+        ></input>
       </div>
 
       <div>
