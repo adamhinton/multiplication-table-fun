@@ -16,7 +16,13 @@ import { useDispatch } from "react-redux";
 const DisplayOptionsForm = (props) => {
   const dispatch = useDispatch();
 
-  const onSubmit = (e) => {};
+  const onSubmit = (e) => {
+    e.preventDefault();
+    dispatch({
+      type: "NEWMULTIPLIERANDLIMIT",
+      payload: { multiplier: 55, limit: 1000 },
+    });
+  };
 
   // dispatch({
   //   type: "NEWMULTIPLIERANDLIMIT",
@@ -24,7 +30,7 @@ const DisplayOptionsForm = (props) => {
   // });
 
   return (
-    <StyForm>
+    <StyForm onSubmit={onSubmit}>
       <div>
         <StyLabel htmlFor="quantity" data-testid="multiplier-label">
           Multiplier:
