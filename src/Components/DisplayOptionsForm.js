@@ -2,19 +2,6 @@ import styled from "styled-components";
 //useDispatch lets us update global state (through redux) with actions
 import { useDispatch } from "react-redux";
 import { useState } from "react";
-// import { useSelector } from "react-redux";
-
-// saving this here so I can see the state structure, delete later
-// const initialState = {
-//   tableValues: {
-//     multiplier: 10,
-//     limit: 30,
-//   },
-// };
-
-// saving this here so I can see action type, delete later
-// const NEWMULTIPLIERANDLIMIT = "NEWMULTIPLIERANDLIMIT";
-// const selectTableValues = (state) => state.tableValues;
 
 const DisplayOptionsForm = (props) => {
   const [formValues, setFormValues] = useState({ multiplier: 0, limit: 0 });
@@ -29,19 +16,6 @@ const DisplayOptionsForm = (props) => {
     });
   };
 
-  // const handleInput = (e) => {
-  //   console.log("e.target.value:", e.target.value);
-  //   setFormValues({
-  //     ...formValues,
-  //     multiplier: e.target.value,
-  //   });
-  // };
-
-  // dispatch({
-  //   type: "NEWMULTIPLIERANDLIMIT",
-  //   payload: { multiplier: 4, limit: 1000 },
-  // });
-
   return (
     <StyForm onSubmit={onSubmit}>
       <div>
@@ -50,6 +24,7 @@ const DisplayOptionsForm = (props) => {
         </StyLabel>
         <input
           type="number"
+          name="multiplier"
           value={formValues.multiplier}
           onChange={(e) => {
             setFormValues({
@@ -71,6 +46,7 @@ const DisplayOptionsForm = (props) => {
         </StyLabel>
         <input
           type="number"
+          name="limit"
           value={formValues.limit}
           onChange={(e) => {
             setFormValues({ ...formValues, limit: Number(e.target.value) });
