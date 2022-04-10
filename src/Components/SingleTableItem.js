@@ -18,6 +18,7 @@ const StySingleTableItem = styled.article`
   margin: 1%;
   color: black;
   padding: 2% auto;
+  display: flex;
   justify-content: center;
-  /* width: 200px; */
+  width: 200px;
 `;
