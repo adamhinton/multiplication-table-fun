@@ -49,3 +49,11 @@ test("[3] Submit Button appears in document", () => {
   const submitBtn = screen.getByTestId("form-submit-button");
   expect(submitBtn).toBeInTheDocument();
 });
+
+test("[4] 'limit' input must be greater than 0 and less than 301", () => {
+  render(
+    <Provider store={store}>
+      <DisplayOptionsForm />
+    </Provider>
+  );
+});
