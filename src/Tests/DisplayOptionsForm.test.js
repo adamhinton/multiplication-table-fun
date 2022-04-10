@@ -1,11 +1,13 @@
 import { render, screen } from "@testing-library/react";
 import DisplayOptionsForm from "../Components/DisplayOptionsForm";
+import store from "./Redux/store";
+import { Provider } from "react-redux";
 
 test.skip("[1] Renders without errors", () => {
   render(<DisplayOptionsForm />);
 });
 
-test.skip("[2] multiplier input and label appear in document", () => {
+test("[2] multiplier input and label appear in document", () => {
   render(<DisplayOptionsForm />);
 
   const multiplierLabel = screen.getByTestId("multiplier-label");
