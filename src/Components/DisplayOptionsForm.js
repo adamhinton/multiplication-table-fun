@@ -34,7 +34,7 @@ const DisplayOptionsForm = (props) => {
               multiplier: Number(e.target.value),
             });
           }}
-          data-testid="multiplier-StyInput"
+          data-testid="multiplier-input"
         ></StyInput>
       </div>
 
@@ -53,7 +53,7 @@ const DisplayOptionsForm = (props) => {
           onChange={(e) => {
             setFormValues({ ...formValues, limit: Number(e.target.value) });
           }}
-          data-testid="display-limit-StyInput"
+          data-testid="display-limit-input"
         ></StyInput>
       </div>
 
