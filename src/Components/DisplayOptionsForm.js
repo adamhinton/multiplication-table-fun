@@ -54,6 +54,8 @@ const DisplayOptionsForm = (props) => {
             setFormValues({ ...formValues, limit: Number(e.target.value) });
           }}
           data-testid="display-limit-input"
+          min={1}
+          max={300}
         ></StyInput>
       </div>
 
