@@ -3,7 +3,7 @@ import DisplayOptionsForm from "../Components/DisplayOptionsForm";
 import store from "../Redux/store";
 import { Provider } from "react-redux";
 
-test.skip("[1] Renders without errors", () => {
+test("[1] Renders without errors", () => {
   render(
     <Provider store={store}>
       <DisplayOptionsForm />
@@ -25,7 +25,7 @@ test("[2] multiplier input and label appear in document", () => {
   expect(multiplierInput).toBeInTheDocument();
 });
 
-test.skip("[2] Display limit input and label appear in document", () => {
+test("[2] Display limit input and label appear in document", () => {
   render(
     <Provider store={store}>
       <DisplayOptionsForm />
@@ -39,7 +39,7 @@ test.skip("[2] Display limit input and label appear in document", () => {
   expect(multiplierInput).toBeInTheDocument();
 });
 
-test.skip("[2] Submit Button appears in document", () => {
+test("[2] Submit Button appears in document", () => {
   render(
     <Provider store={store}>
       <DisplayOptionsForm />
