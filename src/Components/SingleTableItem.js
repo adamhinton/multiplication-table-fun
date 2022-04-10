@@ -15,7 +15,7 @@ export default SingleTableItem;
 
 const StySingleTableItem = styled.article`
   background-color: #bef8f8;
-  margin: 1%;
+  margin: 0.25%;
   color: black;
   padding: 2% auto;
   display: flex;
