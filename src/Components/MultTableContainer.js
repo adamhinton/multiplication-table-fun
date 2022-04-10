@@ -36,4 +36,5 @@ const StyledTableContainer = styled.main`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  margin: 0 10%;
 `;
