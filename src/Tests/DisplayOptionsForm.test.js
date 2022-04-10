@@ -39,7 +39,7 @@ test("[2] Display limit input and label appear in document", () => {
   expect(multiplierInput).toBeInTheDocument();
 });
 
-test("[2] Submit Button appears in document", () => {
+test("[3] Submit Button appears in document", () => {
   render(
     <Provider store={store}>
       <DisplayOptionsForm />
