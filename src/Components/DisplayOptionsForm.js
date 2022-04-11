@@ -72,7 +72,6 @@ const StyForm = styled.form`
   background-color: #bef8f8;
   display: flex;
   flex-direction: column;
-  /* justify-content: center; */
   align-items: center;
   padding-top: 2%;
 `;
