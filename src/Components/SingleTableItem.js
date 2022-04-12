@@ -3,7 +3,8 @@ import styled from "styled-components";
 const SingleTableItem = (props) => {
   const { toBeMultiplied, currentMultiplier } = props;
   let total = toBeMultiplied * currentMultiplier;
-  // console.log(makeThreeDigits(total));
+  console.log(makeThreeDigits(total));
+  let pokeId = makeThreeDigits(total);
 
   return (
     <StySingleTableItem>
@@ -11,9 +12,7 @@ const SingleTableItem = (props) => {
       {/* contains pokemon img if user has toggled that option */}
       <figure>
         <img
-          className="poke-img"
-          data-testid="shiny"
-          src={`https://www.serebii.net/swordshield/pokemon/${total}.png`}
+          src={`https://www.serebii.net/swordshield/pokemon/${pokeId}.png`}
           alt="pokemon"
         />
       </figure>
@@ -34,5 +33,8 @@ const StySingleTableItem = styled.article`
 `;
 
 const makeThreeDigits = (num) => {
-  return Number(String(num).padStart(3, "0"));
+  if (num > 99) {
+    return num;
+  }
+  return String(num).padStart(3, "0");
 };
