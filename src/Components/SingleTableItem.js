@@ -2,11 +2,11 @@ import styled from "styled-components";
 
 const SingleTableItem = (props) => {
   const { toBeMultiplied, currentMultiplier } = props;
+  const total = toBeMultiplied * currentMultiplier;
 
   return (
     <StySingleTableItem>
-      {toBeMultiplied} x {currentMultiplier} ={" "}
-      {toBeMultiplied * currentMultiplier}
+      {toBeMultiplied} x {currentMultiplier} = {total}
     </StySingleTableItem>
   );
 };
