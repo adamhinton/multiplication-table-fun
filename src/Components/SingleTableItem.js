@@ -32,6 +32,8 @@ const StySingleTableItem = styled.article`
   width: 200px;
 `;
 
+//Pokemon ids need to be three digits for img urls,
+//So this converts ids <100 to three digits.
 const makeThreeDigits = (num) => {
   if (num > 99) {
     return num;
