@@ -7,6 +7,15 @@ const SingleTableItem = (props) => {
   return (
     <StySingleTableItem>
       {toBeMultiplied} x {currentMultiplier} = {total}
+      {/* contains pokemon img if user has toggled that option */}
+      <figure>
+        <img
+          className="poke-img"
+          data-testid="shiny"
+          src={`https://www.serebii.net/swordshield/pokemon/${total}.png`}
+          alt="pokemon"
+        />
+      </figure>
     </StySingleTableItem>
   );
 };
