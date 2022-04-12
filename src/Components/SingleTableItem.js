@@ -2,7 +2,8 @@ import styled from "styled-components";
 
 const SingleTableItem = (props) => {
   const { toBeMultiplied, currentMultiplier } = props;
-  const total = toBeMultiplied * currentMultiplier;
+  let total = toBeMultiplied * currentMultiplier;
+  // console.log(makeThreeDigits(total));
 
   return (
     <StySingleTableItem>
@@ -31,3 +32,7 @@ const StySingleTableItem = styled.article`
   justify-content: center;
   width: 200px;
 `;
+
+const makeThreeDigits = (num) => {
+  return Number(String(num).padStart(3, "0"));
+};
