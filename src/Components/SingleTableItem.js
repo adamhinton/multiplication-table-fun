@@ -10,12 +10,12 @@ const SingleTableItem = (props) => {
     <StySingleTableItem>
       {toBeMultiplied} x {currentMultiplier} = {total}
       {/* contains pokemon img if user has toggled that option */}
-      <figure>
+      <StyPokemonFigure>
         <img
           src={`https://www.serebii.net/swordshield/pokemon/${pokeId}.png`}
           alt="pokemon"
         />
-      </figure>
+      </StyPokemonFigure>
     </StySingleTableItem>
   );
 };
@@ -31,6 +31,8 @@ const StySingleTableItem = styled.article`
   justify-content: center;
   width: 200px;
 `;
+
+const StyPokemonFigure = styled.figure``;
 
 //Pokemon ids need to be three digits for img urls,
 //So this converts ids <100 to three digits.
