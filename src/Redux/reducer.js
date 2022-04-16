@@ -7,6 +7,7 @@ import pokemonDisplayToggleReducer from "./pokemonDisplayOptionSlice";
 
 const rootReducer = combineReducers({
   tableValues: tableValuesReducer,
+  displayPokemon: pokemonDisplayToggleReducer,
 });
 
 export default rootReducer;
