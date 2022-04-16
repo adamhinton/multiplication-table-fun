@@ -27,6 +27,7 @@ const initialState = {
     multiplier: 10,
     limit: 30,
   },
+  displayPokemon: false,
 };
 
 const store = createStore(rootReducer, initialState);
