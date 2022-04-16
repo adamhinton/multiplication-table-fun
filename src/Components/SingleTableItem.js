@@ -28,7 +28,9 @@ const StySingleTableItem = styled.article`
   color: black;
   padding: 2% auto;
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
   width: 200px;
 `;
 
