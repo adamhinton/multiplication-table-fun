@@ -3,6 +3,8 @@ import styled from "styled-components";
 import { useDispatch } from "react-redux";
 import { useState } from "react";
 
+//TODO: Put pokemon display toggle option in here, dispatch that on submit, make it toggle pokemon pictures
+
 const DisplayOptionsForm = (props) => {
   const [formValues, setFormValues] = useState({ multiplier: 0, limit: 0 });
 
