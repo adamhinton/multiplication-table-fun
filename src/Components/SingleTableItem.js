@@ -30,11 +30,8 @@ const StySingleTableItem = styled.article`
   align-items: center;
   width: 150px;
   height: 125px;
-  /* border: 3px solid blue; */
 `;
 
 const StyPokemonFigure = styled.figure`
-  /* width: 50%; */
-  border: 1px solid blue;
   width: 60%;
 `;
