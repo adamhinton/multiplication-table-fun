@@ -27,11 +27,14 @@ const StySingleTableItem = styled.article`
   padding: 2% auto;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  width: 200px;
+  width: 150px;
+  height: 125px;
+  /* border: 3px solid blue; */
 `;
 
 const StyPokemonFigure = styled.figure`
-  width: 50%;
+  /* width: 50%; */
+  border: 1px solid blue;
+  width: 60%;
 `;
