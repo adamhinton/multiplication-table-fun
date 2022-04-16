@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 const SingleTableItem = (props) => {
   const { toBeMultiplied, currentMultiplier } = props;
-  let total = toBeMultiplied * currentMultiplier;
+  const total = toBeMultiplied * currentMultiplier;
 
   return (
     <StySingleTableItem>
