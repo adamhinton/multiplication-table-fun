@@ -10,9 +10,9 @@ const NEWMULTIPLIERANDLIMIT = "NEWMULTIPLIERANDLIMIT";
 const tableValuesReducer = (state, action) => {
   switch (action.type) {
     case NEWMULTIPLIERANDLIMIT: {
+      console.log("action.payload:", action.payload);
       //things might need to change here based on the keys in rootReducer object, not totally sure yet
       return {
-        ...state,
         multiplier: action.payload.multiplier,
         limit: action.payload.limit,
       };

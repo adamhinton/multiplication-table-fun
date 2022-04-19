@@ -11,17 +11,18 @@ const DisplayOptionsForm = (props) => {
   const stateValues = useSelector(selectState);
   console.log("stateValues:", stateValues);
 
-  const [formValues, setFormValues] = useState({ multiplier: 0, limit: 0 });
+  const [formValues, setFormValues] = useState(stateValues);
 
   const dispatch = useDispatch();
 
   const onSubmit = (e) => {
+    console.log("formValues:", formValues);
     //doing preventDefault leaves the user-submitted values in the form fields,
     //which is good so they can remember their inputs.
     e.preventDefault();
     dispatch({
       type: "NEWMULTIPLIERANDLIMIT",
-      payload: formValues,
+      payload: formValues.tableValues,
     });
   };
 
@@ -34,11 +35,15 @@ const DisplayOptionsForm = (props) => {
         <StyInput
           type="number"
           name="multiplier"
-          value={formValues.multiplier}
+          value={formValues.tableValues.multiplier}
           onChange={(e) => {
+            e.preventDefault();
             setFormValues({
               ...formValues,
-              multiplier: Number(e.target.value),
+              tableValues: {
+                limit: formValues.tableValues.limit,
+                multiplier: Number(e.target.value),
+              },
             });
           }}
           data-testid="multiplier-input"
@@ -48,7 +53,7 @@ const DisplayOptionsForm = (props) => {
       <div>
         <StyLabel
           htmlFor="quantity"
-          value={formValues.limit}
+          value={formValues.tableValues.limit}
           data-testid="display-limit-label"
         >
           Limit:
@@ -56,9 +61,16 @@ const DisplayOptionsForm = (props) => {
         <StyInput
           type="number"
           name="limit"
-          value={formValues.limit}
+          value={formValues.tableValues.limit}
           onChange={(e) => {
-            setFormValues({ ...formValues, limit: Number(e.target.value) });
+            e.preventDefault();
+            setFormValues({
+              ...formValues,
+              tableValues: {
+                multiplier: formValues.tableValues.multiplier,
+                limit: Number(e.target.value),
+              },
+            });
           }}
           data-testid="display-limit-input"
           min={1}
