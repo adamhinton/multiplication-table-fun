@@ -2,7 +2,7 @@ import styled from "styled-components";
 //useDispatch lets us update global state (through redux) with actions
 import { useDispatch } from "react-redux";
 import { useState } from "react";
-
+import { useSelector } from "react-redux";
 //TODO: Put pokemon display toggle option in here, dispatch that on submit, make it toggle pokemon pictures
 
 const DisplayOptionsForm = (props) => {
