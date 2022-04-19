@@ -7,6 +7,7 @@ const selectDisplayPokemon = (state) => state.displayPokemon;
 
 const MultTableContainer = (props) => {
   const tableValues = useSelector(selectTableValues);
+  const displayPokemon = useSelector(selectDisplayPokemon);
 
   const multiplier = tableValues.multiplier;
   const maxDisplayed = new Array(tableValues.limit);
