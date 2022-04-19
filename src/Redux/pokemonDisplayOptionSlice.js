@@ -8,7 +8,9 @@ const pokemonDisplayToggleReducer = (state, action) => {
     case TOGGLEPOKEMONDISPLAYOPTION: {
       return {
         ...state,
-        displayPokemon: !action.payload,
+        displayPokemon: {
+          isDisplayPokemon: action.payload,
+        },
       };
     }
     default:

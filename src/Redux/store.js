@@ -22,14 +22,12 @@ import rootReducer from "./reducer";
 
 //Initial state is self explanatory: The default values that I want state to have.
 //This will grow as the app grows.
-const initialState = {
-  tableValues: {
-    multiplier: 10,
-    limit: 30,
-  },
-  displayPokemon: false,
-};
 
-const store = createStore(rootReducer, initialState);
+// const store = createStore(rootReducer, initialState);
 
-export default store;
+// export default store;
+
+export default function configureStore(initialState) {
+  const store = createStore(rootReducer, initialState);
+  return store;
+}
