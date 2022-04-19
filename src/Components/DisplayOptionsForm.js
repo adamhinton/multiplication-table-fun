@@ -61,6 +61,27 @@ const DisplayOptionsForm = (props) => {
         ></StyInput>
       </div>
 
+      {/* <div>
+        <StyLabel
+          htmlFor="quantity"
+          value={formValues.limit}
+          data-testid="display-limit-label"
+        >
+          Limit:
+        </StyLabel>
+        <StyInput
+          type="number"
+          name="limit"
+          value={formValues.limit}
+          onChange={(e) => {
+            setFormValues({ ...formValues, limit: Number(e.target.value) });
+          }}
+          data-testid="display-limit-input"
+          min={1}
+          max={300}
+        ></StyInput>
+      </div> */}
+
       <div>
         <StyInput type="submit" data-testid="form-submit-button"></StyInput>
       </div>
