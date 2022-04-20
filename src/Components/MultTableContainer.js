@@ -14,19 +14,22 @@ const MultTableContainer = (props) => {
   console.log("MTC tableValues:", tableValues);
 
   const multiplier = tableValues.multiplier;
-  const maxDisplayed = new Array(tableValues.limit);
+  // const maxDisplayed = new Array(tableValues.limit);
 
   //making an array that the mult table generator will map over
-  for (let i = 0; i < maxDisplayed.length; i++) {
-    maxDisplayed[i] = (i + 1) * multiplier;
-  }
+  // for (let i = 0; i < maxDisplayed.length; i++) {
+  //   maxDisplayed[i] = (i + 1) * multiplier;
+  // }
+
+  const tableItemsArray = Array(tableValues.limit).fill(0);
 
   return (
     <StyledTableContainer>
-      {maxDisplayed.map((item, index) => {
+      {console.log("fdjiaofsda")}
+      {tableItemsArray.map((item, index) => {
         return (
           <SingleTableItem
-            key={item}
+            key={index}
             toBeMultiplied={multiplier}
             currentMultiplier={index + 1}
           />
