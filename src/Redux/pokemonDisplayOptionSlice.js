@@ -6,11 +6,10 @@ const TOGGLEPOKEMONDISPLAYOPTION = "TOGGLEPOKEMONDISPLAYOPTION";
 const pokemonDisplayToggleReducer = (state, action) => {
   switch (action.type) {
     case TOGGLEPOKEMONDISPLAYOPTION: {
+      // console.log("state:", state);
+      console.log("action.payload:", action.payload);
       return {
-        ...state,
-        displayPokemon: {
-          isDisplayPokemon: action.payload,
-        },
+        isDisplayPokemon: action.payload,
       };
     }
     default:

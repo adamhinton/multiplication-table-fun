@@ -24,6 +24,10 @@ const DisplayOptionsForm = (props) => {
       type: "NEWMULTIPLIERANDLIMIT",
       payload: formValues.tableValues,
     });
+    dispatch({
+      type: "TOGGLEPOKEMONDISPLAYOPTION",
+      payload: formValues.displayPokemon.isDisplayPokemon,
+    });
   };
 
   return (
@@ -94,14 +98,14 @@ const DisplayOptionsForm = (props) => {
               ...formValues,
               displayPokemon: {
                 // isDisplayPokemon: !formValues.displayPokemon.isDisplayPokemon;
-                isDisplayPokemon: !e.target.checked,
+                isDisplayPokemon: e.target.checked,
               },
             });
             // console.log("e.target.checked:", e.target.checked);
-            console.log(
-              "isDisplayPokemon:",
-              formValues.displayPokemon.isDisplayPokemon
-            );
+            // console.log(
+            //   "isDisplayPokemon:",
+            //   formValues.displayPokemon.isDisplayPokemon
+            // );
           }}
         ></StyInput>
       </div>

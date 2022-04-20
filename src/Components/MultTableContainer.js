@@ -3,13 +3,15 @@ import SingleTableItem from "./SingleTableItem";
 //useSelector replaces a subscribe function; it knows when state updates and updates components if needed
 import { useSelector } from "react-redux";
 const selectTableValues = (state) => state.tableValues;
-const selectDisplayPokemon = (state) => state.displayPokemon.isDisplayPokemon;
-
+const selectDisplayPokemon = (state) => {
+  console.log("MTC State:", state);
+  return state.displayPokemon.isDisplayPokemon;
+};
 const MultTableContainer = (props) => {
   const tableValues = useSelector(selectTableValues);
   const displayPokemon = useSelector(selectDisplayPokemon);
 
-  console.log("tableValues:", tableValues);
+  // console.log("tableValues:", tableValues);
   console.log("displayPokemon:", displayPokemon);
 
   const multiplier = tableValues.multiplier;
