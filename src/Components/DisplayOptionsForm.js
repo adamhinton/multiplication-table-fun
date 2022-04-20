@@ -7,6 +7,7 @@ import { useSelector } from "react-redux";
 const selectState = (state) => state;
 
 const DisplayOptionsForm = (props) => {
+  //stateValues is pulled from redux state store
   const stateValues = useSelector(selectState);
 
   //updates any time a form input is changed (before hitting submit)
