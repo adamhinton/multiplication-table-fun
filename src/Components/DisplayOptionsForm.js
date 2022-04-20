@@ -16,6 +16,7 @@ const DisplayOptionsForm = (props) => {
   const dispatch = useDispatch();
 
   const onSubmit = (e) => {
+    //updates Redux global state with new multiplier, limit and displayPokemon boolean based on user preferences
     e.preventDefault();
     dispatch({
       type: "NEWMULTIPLIERANDLIMIT",
