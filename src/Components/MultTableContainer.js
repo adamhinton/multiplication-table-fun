@@ -2,23 +2,16 @@ import styled from "styled-components";
 import SingleTableItem from "./SingleTableItem";
 //useSelector replaces a subscribe function; it knows when state updates and updates components if needed
 import { useSelector } from "react-redux";
-const selectTableValues = (state) => state.tableValues;
-const selectDisplayPokemon = (state) => {
-  return state.displayPokemon.isDisplayPokemon;
-};
+const selectState = (state) => state;
+
 const MultTableContainer = (props) => {
-  const tableValues = useSelector(selectTableValues);
-  const displayPokemon = useSelector(selectDisplayPokemon);
-
-  console.log("MTC displayPokemon:", displayPokemon);
-  console.log("MTC tableValues:", tableValues);
-
-  const multiplier = tableValues.multiplier;
+  const state = useSelector(selectState);
+  const { multiplier, limit } = state.tableValues;
 
   //creating an array to map over to generate multiplication table
   //it's just full of zeroes, it could contain anything, doesn't matter. I just can't map over a sparse array,
   //so I had to fill it with something.
-  const tableItemsArray = Array(tableValues.limit).fill(0);
+  const tableItemsArray = Array(limit).fill(0);
 
   return (
     <StyledTableContainer>
