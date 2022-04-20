@@ -2,8 +2,8 @@ import styled from "styled-components";
 //useDispatch lets us update global state (through redux) with actions
 import { useDispatch } from "react-redux";
 import { useState } from "react";
-
 import { useSelector } from "react-redux";
+
 const selectState = (state) => state;
 
 const DisplayOptionsForm = (props) => {
