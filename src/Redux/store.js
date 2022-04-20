@@ -23,10 +23,6 @@ import rootReducer from "./reducer";
 //Initial state is self explanatory: The default values that I want state to have.
 //This will grow as the app grows.
 
-// const store = createStore(rootReducer, initialState);
-
-// export default store;
-
 export default function configureStore(initialState) {
   const store = createStore(rootReducer, initialState);
   return store;
