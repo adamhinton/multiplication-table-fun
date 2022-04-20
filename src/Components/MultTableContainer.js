@@ -2,25 +2,24 @@ import styled from "styled-components";
 import SingleTableItem from "./SingleTableItem";
 //useSelector replaces a subscribe function; it knows when state updates and updates components if needed
 import { useSelector } from "react-redux";
-const selectTableValues = (state) => state.tableValues;
+const selectState = (state) => state;
 
 const MultTableContainer = (props) => {
-  const tableValues = useSelector(selectTableValues);
+  //pulls in global state from Redux store
+  const state = useSelector(selectState);
+  const { multiplier, limit } = state.tableValues;
 
-  const multiplier = tableValues.multiplier;
-  const maxDisplayed = new Array(tableValues.limit);
-
-  //making an array that the mult table generator will map over
-  for (let i = 0; i < maxDisplayed.length; i++) {
-    maxDisplayed[i] = (i + 1) * multiplier;
-  }
+  //creating an array to map over to generate multiplication table
+  //it's just full of zeroes, it could contain anything, doesn't matter. I just can't map over a sparse array,
+  //so I had to fill it with something.
+  const tableItemsArray = Array(limit).fill(0);
 
   return (
     <StyledTableContainer>
-      {maxDisplayed.map((item, index) => {
+      {tableItemsArray.map((item, index) => {
         return (
           <SingleTableItem
-            key={item}
+            key={index}
             toBeMultiplied={multiplier}
             currentMultiplier={index + 1}
           />

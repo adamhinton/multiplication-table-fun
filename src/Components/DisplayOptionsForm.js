@@ -2,19 +2,29 @@ import styled from "styled-components";
 //useDispatch lets us update global state (through redux) with actions
 import { useDispatch } from "react-redux";
 import { useState } from "react";
+import { useSelector } from "react-redux";
+
+const selectState = (state) => state;
 
 const DisplayOptionsForm = (props) => {
-  const [formValues, setFormValues] = useState({ multiplier: 0, limit: 0 });
+  //stateValues is pulled from redux state store
+  const stateValues = useSelector(selectState);
+
+  //updates any time a form input is changed (before hitting submit)
+  const [formValues, setFormValues] = useState(stateValues);
 
   const dispatch = useDispatch();
 
   const onSubmit = (e) => {
-    //doing preventDefault leaves the user-submitted values in the form fields,
-    //which is good so they can remember their inputs.
+    //updates Redux global state with new multiplier, limit and displayPokemon boolean based on user preferences
     e.preventDefault();
     dispatch({
       type: "NEWMULTIPLIERANDLIMIT",
-      payload: formValues,
+      payload: formValues.tableValues,
+    });
+    dispatch({
+      type: "TOGGLEPOKEMONDISPLAYOPTION",
+      payload: formValues.displayPokemon.isDisplayPokemon,
     });
   };
 
@@ -27,11 +37,14 @@ const DisplayOptionsForm = (props) => {
         <StyInput
           type="number"
           name="multiplier"
-          value={formValues.multiplier}
+          value={formValues.tableValues.multiplier}
           onChange={(e) => {
             setFormValues({
               ...formValues,
-              multiplier: Number(e.target.value),
+              tableValues: {
+                ...formValues.tableValues,
+                multiplier: Number(e.target.value),
+              },
             });
           }}
           data-testid="multiplier-input"
@@ -41,7 +54,7 @@ const DisplayOptionsForm = (props) => {
       <div>
         <StyLabel
           htmlFor="quantity"
-          value={formValues.limit}
+          value={formValues.tableValues.limit}
           data-testid="display-limit-label"
         >
           Limit:
@@ -49,13 +62,36 @@ const DisplayOptionsForm = (props) => {
         <StyInput
           type="number"
           name="limit"
-          value={formValues.limit}
+          value={formValues.tableValues.limit}
           onChange={(e) => {
-            setFormValues({ ...formValues, limit: Number(e.target.value) });
+            setFormValues({
+              ...formValues,
+              tableValues: {
+                ...formValues.tableValues,
+                limit: Number(e.target.value),
+              },
+            });
           }}
           data-testid="display-limit-input"
           min={1}
-          max={300}
+          max={100}
+        ></StyInput>
+      </div>
+
+      <div>
+        <StyLabel htmlFor="checkbox">Display Pokemon:</StyLabel>
+        <StyInput
+          type="checkbox"
+          name="checkbox"
+          value={formValues.displayPokemon.isDisplayPokemon}
+          onChange={(e) => {
+            setFormValues({
+              ...formValues,
+              displayPokemon: {
+                isDisplayPokemon: e.target.checked,
+              },
+            });
+          }}
         ></StyInput>
       </div>
 

@@ -3,9 +3,11 @@
 
 import { combineReducers } from "@reduxjs/toolkit";
 import tableValuesReducer from "./tableValuesSlice";
+import pokemonDisplayToggleReducer from "./pokemonDisplayOptionSlice";
 
 const rootReducer = combineReducers({
   tableValues: tableValuesReducer,
+  displayPokemon: pokemonDisplayToggleReducer,
 });
 
 export default rootReducer;
