@@ -9,14 +9,12 @@ const selectState = (state) => state;
 
 const DisplayOptionsForm = (props) => {
   const stateValues = useSelector(selectState);
-  console.log("stateValues:", stateValues);
 
   const [formValues, setFormValues] = useState(stateValues);
 
   const dispatch = useDispatch();
 
   const onSubmit = (e) => {
-    console.log("formValues:", formValues);
     //doing preventDefault leaves the user-submitted values in the form fields,
     //which is good so they can remember their inputs.
     e.preventDefault();
@@ -101,11 +99,6 @@ const DisplayOptionsForm = (props) => {
                 isDisplayPokemon: e.target.checked,
               },
             });
-            // console.log("e.target.checked:", e.target.checked);
-            // console.log(
-            //   "isDisplayPokemon:",
-            //   formValues.displayPokemon.isDisplayPokemon
-            // );
           }}
         ></StyInput>
       </div>

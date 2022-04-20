@@ -3,8 +3,6 @@ import App from "../App";
 import store from "../Redux/store";
 import { Provider } from "react-redux";
 
-console.log("store:", store);
-
 test("[1] Sanity checks", () => {
   const twoPlusTwo = 2 + 2;
   expect(twoPlusTwo).toBe(4);

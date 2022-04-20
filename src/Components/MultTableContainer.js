@@ -4,15 +4,11 @@ import SingleTableItem from "./SingleTableItem";
 import { useSelector } from "react-redux";
 const selectTableValues = (state) => state.tableValues;
 const selectDisplayPokemon = (state) => {
-  console.log("MTC State:", state);
   return state.displayPokemon.isDisplayPokemon;
 };
 const MultTableContainer = (props) => {
   const tableValues = useSelector(selectTableValues);
   const displayPokemon = useSelector(selectDisplayPokemon);
-
-  // console.log("tableValues:", tableValues);
-  console.log("displayPokemon:", displayPokemon);
 
   const multiplier = tableValues.multiplier;
   const maxDisplayed = new Array(tableValues.limit);
