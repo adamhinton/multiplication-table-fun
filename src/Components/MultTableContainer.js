@@ -10,6 +10,9 @@ const MultTableContainer = (props) => {
   const tableValues = useSelector(selectTableValues);
   const displayPokemon = useSelector(selectDisplayPokemon);
 
+  console.log("MTC displayPokemon:", displayPokemon);
+  console.log("MTC tableValues:", tableValues);
+
   const multiplier = tableValues.multiplier;
   const maxDisplayed = new Array(tableValues.limit);
 
