@@ -14,18 +14,14 @@ const MultTableContainer = (props) => {
   console.log("MTC tableValues:", tableValues);
 
   const multiplier = tableValues.multiplier;
-  // const maxDisplayed = new Array(tableValues.limit);
 
-  //making an array that the mult table generator will map over
-  // for (let i = 0; i < maxDisplayed.length; i++) {
-  //   maxDisplayed[i] = (i + 1) * multiplier;
-  // }
-
+  //creating an array to map over to generate multiplication table
+  //it's just full of zeroes, it could contain anything, doesn't matter. I just can't map over a sparse array,
+  //so I had to fill it with something.
   const tableItemsArray = Array(tableValues.limit).fill(0);
 
   return (
     <StyledTableContainer>
-      {console.log("fdjiaofsda")}
       {tableItemsArray.map((item, index) => {
         return (
           <SingleTableItem
