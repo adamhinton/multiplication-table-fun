@@ -5,6 +5,7 @@ import { useSelector } from "react-redux";
 const selectState = (state) => state;
 
 const MultTableContainer = (props) => {
+  //pulls in global state from Redux store
   const state = useSelector(selectState);
   const { multiplier, limit } = state.tableValues;
 
