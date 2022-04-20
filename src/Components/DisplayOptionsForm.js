@@ -78,26 +78,33 @@ const DisplayOptionsForm = (props) => {
         ></StyInput>
       </div>
 
-      {/* <div>
+      <div>
         <StyLabel
-          htmlFor="quantity"
-          value={formValues.limit}
-          data-testid="display-limit-label"
+          htmlFor="checkbox"
+          // value={formValues.displayPokemon.isDisplayPokemon}
         >
-          Limit:
+          Display Pokemon:
         </StyLabel>
         <StyInput
-          type="number"
-          name="limit"
-          value={formValues.limit}
+          type="checkbox"
+          name="checkbox"
+          value={formValues.displayPokemon.isDisplayPokemon}
           onChange={(e) => {
-            setFormValues({ ...formValues, limit: Number(e.target.value) });
+            setFormValues({
+              ...formValues,
+              displayPokemon: {
+                // isDisplayPokemon: !formValues.displayPokemon.isDisplayPokemon;
+                isDisplayPokemon: !e.target.checked,
+              },
+            });
+            // console.log("e.target.checked:", e.target.checked);
+            console.log(
+              "isDisplayPokemon:",
+              formValues.displayPokemon.isDisplayPokemon
+            );
           }}
-          data-testid="display-limit-input"
-          min={1}
-          max={300}
         ></StyInput>
-      </div> */}
+      </div>
 
       <div>
         <StyInput type="submit" data-testid="form-submit-button"></StyInput>
