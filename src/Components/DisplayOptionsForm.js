@@ -74,7 +74,7 @@ const DisplayOptionsForm = (props) => {
           }}
           data-testid="display-limit-input"
           min={1}
-          max={300}
+          max={100}
         ></StyInput>
       </div>
 
