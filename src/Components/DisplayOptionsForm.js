@@ -40,7 +40,7 @@ const DisplayOptionsForm = (props) => {
             setFormValues({
               ...formValues,
               tableValues: {
-                limit: formValues.tableValues.limit,
+                ...formValues.tableValues,
                 multiplier: Number(e.target.value),
               },
             });
@@ -66,7 +66,7 @@ const DisplayOptionsForm = (props) => {
             setFormValues({
               ...formValues,
               tableValues: {
-                multiplier: formValues.tableValues.multiplier,
+                ...formValues.tableValues,
                 limit: Number(e.target.value),
               },
             });
