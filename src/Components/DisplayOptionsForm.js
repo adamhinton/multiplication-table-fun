@@ -5,7 +5,6 @@ import { useState } from "react";
 
 import { useSelector } from "react-redux";
 const selectState = (state) => state;
-//TODO: Put pokemon display toggle option in here, dispatch that on submit, make it toggle pokemon pictures
 
 const DisplayOptionsForm = (props) => {
   const stateValues = useSelector(selectState);
@@ -15,8 +14,6 @@ const DisplayOptionsForm = (props) => {
   const dispatch = useDispatch();
 
   const onSubmit = (e) => {
-    //doing preventDefault leaves the user-submitted values in the form fields,
-    //which is good so they can remember their inputs.
     e.preventDefault();
     dispatch({
       type: "NEWMULTIPLIERANDLIMIT",
