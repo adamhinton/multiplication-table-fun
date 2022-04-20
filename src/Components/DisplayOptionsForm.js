@@ -36,7 +36,6 @@ const DisplayOptionsForm = (props) => {
           name="multiplier"
           value={formValues.tableValues.multiplier}
           onChange={(e) => {
-            e.preventDefault();
             setFormValues({
               ...formValues,
               tableValues: {
@@ -62,7 +61,6 @@ const DisplayOptionsForm = (props) => {
           name="limit"
           value={formValues.tableValues.limit}
           onChange={(e) => {
-            e.preventDefault();
             setFormValues({
               ...formValues,
               tableValues: {
