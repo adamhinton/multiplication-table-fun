@@ -9,6 +9,7 @@ const selectState = (state) => state;
 const DisplayOptionsForm = (props) => {
   const stateValues = useSelector(selectState);
 
+  //updates any time a form input is changed (before hitting submit)
   const [formValues, setFormValues] = useState(stateValues);
 
   const dispatch = useDispatch();
