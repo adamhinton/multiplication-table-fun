@@ -35,11 +35,11 @@ test("[2] Display limit input and label appear in document", () => {
     </Provider>
   );
 
-  const multiplierLabel = screen.getByTestId("display-limit-label");
-  const multiplierInput = screen.getByTestId("display-limit-input");
+  const limitLabel = screen.getByTestId("display-limit-label");
+  const limitInput = screen.getByTestId("display-limit-input");
 
-  expect(multiplierLabel).toBeVisible();
-  expect(multiplierInput).toBeVisible();
+  expect(limitLabel).toBeVisible();
+  expect(limitInput).toBeVisible();
 });
 
 test("[3] Submit Button appears in document", () => {
@@ -71,4 +71,7 @@ test("[5] Input values stay the same after hitting submit", () => {
   const multiplierLabel = screen.getByTestId("display-limit-label");
   const multiplierInput = screen.getByTestId("display-limit-input");
   const submitBtn = screen.getByTestId("form-submit-button");
+
+  userEvent.type(multiplierInput, "20");
+  userEvent.type(multiplierInput, 40);
 });
