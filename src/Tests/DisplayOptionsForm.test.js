@@ -23,8 +23,8 @@ test("[2] multiplier input and label appear in document", () => {
   const multiplierLabel = screen.getByTestId("multiplier-label");
   const multiplierInput = screen.getByTestId("multiplier-input");
 
-  expect(multiplierLabel).toBeInTheDocument();
-  expect(multiplierInput).toBeInTheDocument();
+  expect(multiplierLabel).toBeVisible();
+  expect(multiplierInput).toBeVisible();
 });
 
 test("[2] Display limit input and label appear in document", () => {
@@ -37,8 +37,8 @@ test("[2] Display limit input and label appear in document", () => {
   const multiplierLabel = screen.getByTestId("display-limit-label");
   const multiplierInput = screen.getByTestId("display-limit-input");
 
-  expect(multiplierLabel).toBeInTheDocument();
-  expect(multiplierInput).toBeInTheDocument();
+  expect(multiplierLabel).toBeVisible();
+  expect(multiplierInput).toBeVisible();
 });
 
 test("[3] Submit Button appears in document", () => {
@@ -49,7 +49,7 @@ test("[3] Submit Button appears in document", () => {
   );
 
   const submitBtn = screen.getByTestId("form-submit-button");
-  expect(submitBtn).toBeInTheDocument();
+  expect(submitBtn).toBeVisible();
 });
 
 test("[4] Display Pokemon checkbox appears in document", () => {
@@ -65,3 +65,9 @@ test("[4] Display Pokemon checkbox appears in document", () => {
   expect(pokeDisplayLabel).toBeVisible();
   expect(pokeDisplayInput).toBeVisible();
 });
+
+// test("[5] Form inputs render with intended default values", () => {
+//   const multiplierInput = screen.getByTestId("multiplier-input");
+
+//   expect(multiplierInput).toHaveValue("10");
+// });
