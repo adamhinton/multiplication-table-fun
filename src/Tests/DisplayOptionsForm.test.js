@@ -58,4 +58,10 @@ test("[4] Display Pokemon checkbox appears in document", () => {
       <DisplayOptionsForm />
     </Provider>
   );
+
+  const pokeDisplayLabel = screen.getByTestId("pokedisplay-checkbox-label");
+  const pokeDisplayInput = screen.getByTestId("pokedisplay-checkbox-input");
+
+  expect(pokeDisplayLabel).toBeVisible();
+  expect(pokeDisplayInput).toBeVisible();
 });
