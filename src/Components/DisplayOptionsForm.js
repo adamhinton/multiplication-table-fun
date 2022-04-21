@@ -79,10 +79,13 @@ const DisplayOptionsForm = (props) => {
       </div>
 
       <div>
-        <StyLabel htmlFor="checkbox">Display Pokemon:</StyLabel>
+        <StyLabel htmlFor="checkbox" data-testid="pokedisplay-checkbox-label">
+          Display Pokemon:
+        </StyLabel>
         <StyInput
           type="checkbox"
           name="checkbox"
+          data-testid = "pokedisplay-checkbox-input"
           value={formValues.displayPokemon.isDisplayPokemon}
           onChange={(e) => {
             setFormValues({
