@@ -51,3 +51,11 @@ test("[3] Submit Button appears in document", () => {
   const submitBtn = screen.getByTestId("form-submit-button");
   expect(submitBtn).toBeInTheDocument();
 });
+
+test("[4] Display Pokemon checkbox appears in document", () => {
+  render(
+    <Provider store={store}>
+      <DisplayOptionsForm />
+    </Provider>
+  );
+});
