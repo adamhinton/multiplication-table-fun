@@ -66,3 +66,9 @@ test("[4] Display Pokemon checkbox appears in document", () => {
   expect(pokeDisplayLabel).toBeVisible();
   expect(pokeDisplayInput).toBeVisible();
 });
+
+test("[5] Input values stay the same after hitting submit", () => {
+  const multiplierLabel = screen.getByTestId("display-limit-label");
+  const multiplierInput = screen.getByTestId("display-limit-input");
+  const submitBtn = screen.getByTestId("form-submit-button");
+});
