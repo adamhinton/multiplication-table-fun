@@ -1,4 +1,4 @@
-import { render, screen } from "@testing-library/react";
+import { render, screen, page } from "@testing-library/react";
 import DisplayOptionsForm from "../Components/DisplayOptionsForm";
 import configureStore from "../Redux/store";
 import { Provider } from "react-redux";
@@ -65,9 +65,3 @@ test("[4] Display Pokemon checkbox appears in document", () => {
   expect(pokeDisplayLabel).toBeVisible();
   expect(pokeDisplayInput).toBeVisible();
 });
-
-// test("[5] Form inputs render with intended default values", () => {
-//   const multiplierInput = screen.getByTestId("multiplier-input");
-
-//   expect(multiplierInput).toHaveValue("10");
-// });
