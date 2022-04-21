@@ -1,7 +1,9 @@
 import { render, screen } from "@testing-library/react";
 import DisplayOptionsForm from "../Components/DisplayOptionsForm";
-import store from "../Redux/store";
+import configureStore from "../Redux/store";
 import { Provider } from "react-redux";
+
+const store = configureStore();
 
 test("[1] Renders without errors", () => {
   render(
