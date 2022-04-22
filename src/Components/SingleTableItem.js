@@ -5,7 +5,7 @@ const SingleTableItem = (props) => {
   const total = toBeMultiplied * currentMultiplier;
 
   return (
-    <StySingleTableItem>
+    <StySingleTableItem data-testid="single-table-item">
       {toBeMultiplied} x {currentMultiplier} = {total}
       {/* contains pokemon img if user has toggled that option */}
       <StyPokemonFigure>
