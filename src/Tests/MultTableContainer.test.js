@@ -12,3 +12,14 @@ test("[1] Renders without errors", () => {
     </Provider>
   );
 });
+
+test("[2] At least one multiplication table item appears on screen", () => {
+  render(
+    <Provider store={store}>
+      <MultTableContainer />
+    </Provider>
+  );
+
+  const singleTableItem = screen.getByTestId("single-table-item");
+  expect(singleTableItem).toBeVisible();
+});
