@@ -10,6 +10,7 @@ const SingleTableItem = (props) => {
       {/* contains pokemon img if user has toggled that option */}
       <StyPokemonFigure>
         <img
+          data-testid="poke-img"
           src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${total}.png`}
           alt="pokemon"
         />
