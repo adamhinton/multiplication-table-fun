@@ -23,3 +23,14 @@ test("[2] Correct numbers appear in component", () => {
   const expectedSolution = screen.getByText("10 x 7 = 70");
   expect(expectedSolution).toBeVisible();
 });
+
+test("[3] Pokemon image appears on screen", () => {
+  render(
+    <Provider store={store}>
+      <SingleTableItem toBeMultiplied={10} currentMultiplier={7} />
+    </Provider>
+  );
+
+  const pokeImg = screen.getByTestId("poke-img");
+  expect(pokeImg).toBeVisible();
+});
