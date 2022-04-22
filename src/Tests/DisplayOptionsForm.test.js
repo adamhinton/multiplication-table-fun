@@ -1,7 +1,9 @@
 import { render, screen } from "@testing-library/react";
 import DisplayOptionsForm from "../Components/DisplayOptionsForm";
-import store from "../Redux/store";
+import configureStore from "../Redux/store";
 import { Provider } from "react-redux";
+
+const store = configureStore();
 
 test("[1] Renders without errors", () => {
   render(
@@ -21,8 +23,8 @@ test("[2] multiplier input and label appear in document", () => {
   const multiplierLabel = screen.getByTestId("multiplier-label");
   const multiplierInput = screen.getByTestId("multiplier-input");
 
-  expect(multiplierLabel).toBeInTheDocument();
-  expect(multiplierInput).toBeInTheDocument();
+  expect(multiplierLabel).toBeVisible();
+  expect(multiplierInput).toBeVisible();
 });
 
 test("[2] Display limit input and label appear in document", () => {
@@ -32,11 +34,11 @@ test("[2] Display limit input and label appear in document", () => {
     </Provider>
   );
 
-  const multiplierLabel = screen.getByTestId("display-limit-label");
-  const multiplierInput = screen.getByTestId("display-limit-input");
+  const limitLabel = screen.getByTestId("display-limit-label");
+  const limitInput = screen.getByTestId("display-limit-input");
 
-  expect(multiplierLabel).toBeInTheDocument();
-  expect(multiplierInput).toBeInTheDocument();
+  expect(limitLabel).toBeVisible();
+  expect(limitInput).toBeVisible();
 });
 
 test("[3] Submit Button appears in document", () => {
@@ -47,14 +49,19 @@ test("[3] Submit Button appears in document", () => {
   );
 
   const submitBtn = screen.getByTestId("form-submit-button");
-  expect(submitBtn).toBeInTheDocument();
+  expect(submitBtn).toBeVisible();
 });
 
-//the needed error code doesn't show up in screen render when you put in an invalid limit. Look more at this later
-test.skip("[4] 'limit' input must be greater than 0 and less than 301", () => {
+test("[4] Display Pokemon checkbox appears in document", () => {
   render(
     <Provider store={store}>
       <DisplayOptionsForm />
     </Provider>
   );
+
+  const pokeDisplayLabel = screen.getByTestId("pokedisplay-checkbox-label");
+  const pokeDisplayInput = screen.getByTestId("pokedisplay-checkbox-input");
+
+  expect(pokeDisplayLabel).toBeVisible();
+  expect(pokeDisplayInput).toBeVisible();
 });
