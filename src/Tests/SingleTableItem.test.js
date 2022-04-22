@@ -12,3 +12,14 @@ test("[1] Renders without errors", () => {
     </Provider>
   );
 });
+
+test("[2] Correct numbers appear in component", () => {
+  render(
+    <Provider store={store}>
+      <SingleTableItem toBeMultiplied={10} currentMultiplier={7} />
+    </Provider>
+  );
+
+  const expectedSolution = screen.getByText("10 x 7 = 70");
+  expect(expectedSolution).toBeVisible();
+});
