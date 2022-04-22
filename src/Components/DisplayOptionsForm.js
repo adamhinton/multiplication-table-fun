@@ -37,7 +37,7 @@ const DisplayOptionsForm = (props) => {
         <StyInput
           type="number"
           name="multiplier"
-          value={formValues.tableValues.multiplier}
+          value={formValues.tableValues.multiplier || 10}
           onChange={(e) => {
             setFormValues({
               ...formValues,
@@ -54,7 +54,7 @@ const DisplayOptionsForm = (props) => {
       <div>
         <StyLabel
           htmlFor="quantity"
-          value={formValues.tableValues.limit}
+          value={formValues.tableValues.limit || 30}
           data-testid="display-limit-label"
         >
           Limit:
@@ -85,7 +85,7 @@ const DisplayOptionsForm = (props) => {
         <StyInput
           type="checkbox"
           name="checkbox"
-          data-testid = "pokedisplay-checkbox-input"
+          data-testid="pokedisplay-checkbox-input"
           value={formValues.displayPokemon.isDisplayPokemon}
           onChange={(e) => {
             setFormValues({
