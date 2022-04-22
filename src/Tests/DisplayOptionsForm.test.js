@@ -68,10 +68,24 @@ test("[4] Display Pokemon checkbox appears in document", () => {
 });
 
 test("[5] Input values stay the same after hitting submit", () => {
-  const multiplierLabel = screen.getByTestId("display-limit-label");
-  const multiplierInput = screen.getByTestId("display-limit-input");
+  render(
+    <Provider store={store}>
+      <DisplayOptionsForm />
+    </Provider>
+  );
+
+  const multiplierInput = screen.getByTestId("multiplier-input");
+  const limitInput = screen.getByTestId("display-limit-input");
   const submitBtn = screen.getByTestId("form-submit-button");
 
   userEvent.type(multiplierInput, "20");
-  userEvent.type(multiplierInput, 40);
+  userEvent.type(limitInput, "35");
+
+  expect(multiplierInput).toHaveValue(20);
+  expect(limitInput).toHaveValue(35);
+
+  userEvent.click(submitBtn);
+
+  expect(multiplierInput).toHaveValue(20);
+  expect(limitInput).toHaveValue(35);
 });
