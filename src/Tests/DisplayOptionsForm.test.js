@@ -1,5 +1,4 @@
 import { render, screen } from "@testing-library/react";
-import userEvent from "@testing-library/user-event";
 import DisplayOptionsForm from "../Components/DisplayOptionsForm";
 import configureStore from "../Redux/store";
 import { Provider } from "react-redux";
@@ -66,4 +65,3 @@ test("[4] Display Pokemon checkbox appears in document", () => {
   expect(pokeDisplayLabel).toBeVisible();
   expect(pokeDisplayInput).toBeVisible();
 });
-
