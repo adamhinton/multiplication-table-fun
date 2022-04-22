@@ -37,7 +37,7 @@ const DisplayOptionsForm = (props) => {
         <StyInput
           type="number"
           name="multiplier"
-          value={formValues.tableValues.multiplier || 10}
+          value={formValues.tableValues.multiplier}
           onChange={(e) => {
             setFormValues({
               ...formValues,
@@ -54,7 +54,7 @@ const DisplayOptionsForm = (props) => {
       <div>
         <StyLabel
           htmlFor="quantity"
-          value={formValues.tableValues.limit || 30}
+          value={formValues.tableValues.limit}
           data-testid="display-limit-label"
         >
           Limit:
