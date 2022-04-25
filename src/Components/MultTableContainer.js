@@ -24,6 +24,7 @@ const MultTableContainer = (props) => {
             key={index}
             toBeMultiplied={multiplier}
             currentMultiplier={index + 1}
+            isDisplayPokemon={isDisplayPokemon}
           />
         );
       })}
