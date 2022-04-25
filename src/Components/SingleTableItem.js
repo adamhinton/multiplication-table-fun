@@ -1,7 +1,8 @@
 import styled from "styled-components";
 
 const SingleTableItem = (props) => {
-  const { toBeMultiplied, currentMultiplier } = props;
+  const { toBeMultiplied, currentMultiplier, isDisplayPokemon } = props;
+  console.log("isDisplayPokemon:", isDisplayPokemon);
   const total = toBeMultiplied * currentMultiplier;
 
   return (
