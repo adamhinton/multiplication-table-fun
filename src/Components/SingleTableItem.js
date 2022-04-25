@@ -36,8 +36,9 @@ const StySingleTableItem = styled.article`
   flex-direction: column;
   align-items: center;
   width: 150px;
-  height: 125px;
-  /* width: 180px; */
+  height: ${(props) => {
+    return props.isDisplayPokemon ? "150px" : "auto";
+  }};
 `;
 
 const StyPokemonFigure = styled.figure`
