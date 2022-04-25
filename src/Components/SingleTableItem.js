@@ -42,5 +42,5 @@ const StySingleTableItem = styled.article`
 `;
 
 const StyPokemonFigure = styled.figure`
-  width: 60%;
+  width: 80%;
 `;
