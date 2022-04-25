@@ -24,13 +24,30 @@ test("[2] Correct numbers appear in component", () => {
   expect(expectedSolution).toBeVisible();
 });
 
-test("[3] Pokemon image appears on screen", () => {
-  render(
+test("[3] Pokemon image toggles based on user preference", async () => {
+  const { rerender } = render(
     <Provider store={store}>
-      <SingleTableItem toBeMultiplied={10} currentMultiplier={7} />
+      <SingleTableItem
+        toBeMultiplied={10}
+        currentMultiplier={7}
+        isDisplayPokemon={false}
+      />
     </Provider>
   );
 
-  const pokeImg = screen.getByTestId("poke-img");
-  expect(pokeImg).toBeVisible();
+  const pokemonImg = screen.queryByTestId("poke-img");
+  expect(pokemonImg).not.toBeInTheDocument();
+
+  rerender(
+    <Provider store={store}>
+      <SingleTableItem
+        toBeMultiplied={10}
+        currentMultiplier={7}
+        isDisplayPokemon={true}
+      />
+    </Provider>
+  );
+
+  const newPokemonImg = screen.queryByTestId("poke-img");
+  expect(newPokemonImg).toBeInTheDocument();
 });

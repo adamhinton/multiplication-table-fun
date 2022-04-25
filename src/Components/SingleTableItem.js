@@ -1,20 +1,25 @@
 import styled from "styled-components";
 
 const SingleTableItem = (props) => {
-  const { toBeMultiplied, currentMultiplier } = props;
+  const { toBeMultiplied, currentMultiplier, isDisplayPokemon } = props;
   const total = toBeMultiplied * currentMultiplier;
 
   return (
-    <StySingleTableItem data-testid="single-table-item">
+    <StySingleTableItem
+      data-testid="single-table-item"
+      isDisplayPokemon={isDisplayPokemon}
+    >
       {toBeMultiplied} x {currentMultiplier} = {total}
       {/* contains pokemon img if user has toggled that option */}
-      <StyPokemonFigure>
-        <img
-          data-testid="poke-img"
-          src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${total}.png`}
-          alt="pokemon"
-        />
-      </StyPokemonFigure>
+      {isDisplayPokemon && (
+        <StyPokemonFigure>
+          <img
+            data-testid="poke-img"
+            src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${total}.png`}
+            alt="pokemon"
+          />
+        </StyPokemonFigure>
+      )}
     </StySingleTableItem>
   );
 };
@@ -30,9 +35,11 @@ const StySingleTableItem = styled.article`
   flex-direction: column;
   align-items: center;
   width: 150px;
-  height: 125px;
+  height: ${(props) => {
+    return props.isDisplayPokemon ? "150px" : "auto";
+  }};
 `;
 
 const StyPokemonFigure = styled.figure`
-  width: 60%;
+  width: 80%;
 `;
