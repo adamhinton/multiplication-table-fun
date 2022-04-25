@@ -6,7 +6,10 @@ const SingleTableItem = (props) => {
   const total = toBeMultiplied * currentMultiplier;
 
   return (
-    <StySingleTableItem data-testid="single-table-item">
+    <StySingleTableItem
+      data-testid="single-table-item"
+      isDisplayPokemon={isDisplayPokemon}
+    >
       {toBeMultiplied} x {currentMultiplier} = {total}
       {/* contains pokemon img if user has toggled that option */}
       {isDisplayPokemon && (
@@ -34,6 +37,7 @@ const StySingleTableItem = styled.article`
   align-items: center;
   width: 150px;
   height: 125px;
+  /* width: 180px; */
 `;
 
 const StyPokemonFigure = styled.figure`
