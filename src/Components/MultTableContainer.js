@@ -9,7 +9,6 @@ const MultTableContainer = (props) => {
   const state = useSelector(selectState);
   const { multiplier, limit } = state.tableValues;
   const isDisplayPokemon = state.displayPokemon.isDisplayPokemon;
-  console.log("isDisplayPokemon:", isDisplayPokemon);
 
   //creating an array to map over to generate multiplication table
   //it's just full of zeroes, it could contain anything, doesn't matter. I just can't map over a sparse array,
