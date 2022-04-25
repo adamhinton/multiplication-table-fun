@@ -24,10 +24,14 @@ test("[2] Correct numbers appear in component", () => {
   expect(expectedSolution).toBeVisible();
 });
 
-test("[3] Pokemon image appears on screen", () => {
+test("[3] Pokemon image appears on screen when isDisplayPokemon is true", () => {
   render(
     <Provider store={store}>
-      <SingleTableItem toBeMultiplied={10} currentMultiplier={7} />
+      <SingleTableItem
+        toBeMultiplied={10}
+        currentMultiplier={7}
+        isDisplayPokemon={true}
+      />
     </Provider>
   );
 
