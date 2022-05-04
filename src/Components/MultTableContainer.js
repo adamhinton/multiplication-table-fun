@@ -42,6 +42,7 @@ const StyledTableContainer = styled.ol`
   margin: 0 20%;
   height: auto;
   padding-inline-start: 0;
+  justify-content: center;
 
   @media (max-width: 1250px) {
     margin: 0 10%;
