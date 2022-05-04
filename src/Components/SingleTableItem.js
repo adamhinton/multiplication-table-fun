@@ -2,7 +2,13 @@ import styled from "styled-components";
 
 const SingleTableItem = (props) => {
   const { toBeMultiplied, currentMultiplier, isDisplayPokemon } = props;
+
   const total = toBeMultiplied * currentMultiplier;
+
+  let pokeId = total;
+  if (total > 898) {
+    pokeId = Math.floor(Math.random() * 898);
+  }
 
   return (
     <StySingleTableItem
@@ -15,7 +21,9 @@ const SingleTableItem = (props) => {
         <StyPokemonFigure>
           <img
             data-testid="poke-img"
-            src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${total}.png`}
+            src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${
+              pokeId + 1
+            }.png`}
             alt="pokemon"
           />
         </StyPokemonFigure>
