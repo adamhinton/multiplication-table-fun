@@ -8,6 +8,8 @@ const SingleTableItem = (props) => {
 
   const total = toBeMultiplied * currentMultiplier;
 
+  // pokedex ids max out at 898,
+  // So this generates a random id for numbers over 898
   let pokeId = total;
   if (total > 898) {
     pokeId = Math.floor(Math.random() * 898);
