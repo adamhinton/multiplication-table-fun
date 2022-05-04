@@ -26,6 +26,8 @@ const StyHeader = styled.header`
   font-size: 1rem;
   //TODO: probably make this padding bigger for larger screens
   padding: 0 5%;
+  max-width: 1200px;
+  margin: auto;
 
   @media (max-width: 876px) {
     flex-direction: column;
