@@ -31,6 +31,14 @@ const StyHeader = styled.header`
 
   @media (max-width: 876px) {
     flex-direction: column;
+    width: 80%;
+  }
+
+  @media (max-width: 600px) {
+    width: 90%;
+  }
+  @media (max-width: 400px) {
+    width: 100%;
   }
 `;
 
