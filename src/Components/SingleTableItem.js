@@ -20,10 +20,10 @@ const SingleTableItem = (props) => {
       data-testid="single-table-item"
       isDisplayPokemon={isDisplayPokemon}
     >
-      <div>
+      <TextContainerDiv>
         {toBeMultiplied} x {currentMultiplier} =
         <StyDisplayTotal> {total} </StyDisplayTotal>
-      </div>
+      </TextContainerDiv>
       {/* contains pokemon img if user has toggled that option */}
       {isDisplayPokemon && (
         <StyPokemonFigure>
@@ -64,5 +64,9 @@ const StyPokemonFigure = styled.figure`
 `;
 
 const StyDisplayTotal = styled.strong`
+  color: black;
+`;
+
+const TextContainerDiv = styled.div`
   color: black;
 `;
