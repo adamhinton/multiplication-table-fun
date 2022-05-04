@@ -1,3 +1,6 @@
+// If the user chooses, this component displays an image of the pokemon with pokedex id corresponding to displayed total
+// Pokedex id's only go up to 898, so if the total is higher than that, a random pokedex id will be generated >= 898.
+
 import styled from "styled-components";
 
 const SingleTableItem = (props) => {
