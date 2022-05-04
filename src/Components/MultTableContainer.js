@@ -36,10 +36,19 @@ export default MultTableContainer;
 const StyledTableContainer = styled.ol`
   max-width: 1200px;
   display: flex;
-  flex-direction: column;
+  flex-direction: column-wrap;
   align-items: center;
   flex-wrap: wrap;
   margin: 0 20%;
-  height: 80vh;
+  height: auto;
   padding-inline-start: 0;
+
+  @media (max-width: 1250px) {
+    margin: 0 10%;
+  }
+
+  @media (max-width: 1000px) {
+    height: 100%;
+    flex-direction: row;
+  }
 `;
