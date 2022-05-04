@@ -34,10 +34,12 @@ const MultTableContainer = (props) => {
 export default MultTableContainer;
 
 const StyledTableContainer = styled.ol`
+  max-width: 1200px;
   display: flex;
   flex-direction: column;
   align-items: center;
   flex-wrap: wrap;
-  margin: 0 10%;
+  margin: 0 20%;
   height: 80vh;
+  padding-inline-start: 0;
 `;
