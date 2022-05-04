@@ -112,7 +112,13 @@ const StyForm = styled.form`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 2%;
+  padding: 0.75% 0;
+  max-width: 600px;
+  margin: 0.5% auto;
+
+  @media (max-width: 800px) {
+    width: 70%;
+  }
 `;
 
 const StyLabel = styled.label`
