@@ -46,8 +46,9 @@ const StySingleTableItem = styled.li`
   color: black;
   padding: 2% auto;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-direction: row;
+  /* align-items: center; */
+  justify-content: center;
   width: 150px;
   height: ${(props) => {
     return props.isDisplayPokemon ? "150px" : "auto";
