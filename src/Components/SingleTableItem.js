@@ -51,10 +51,7 @@ const StySingleTableItem = styled.li`
   height: ${(props) => {
     return props.isDisplayPokemon ? "150px" : "auto";
   }};
-
-  @media (max-width: 1000px) {
-    margin: 0.35%;
-  }
+  margin: 0.35%;
 `;
 
 const StyPokemonFigure = styled.figure`
