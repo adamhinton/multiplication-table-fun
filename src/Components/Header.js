@@ -26,20 +26,32 @@ const StyHeader = styled.header`
   font-size: 1rem;
   //TODO: probably make this padding bigger for larger screens
   padding: 0 5%;
+
+  @media (max-width: 876px) {
+    flex-direction: column;
+  }
 `;
 
 const StyH1 = styled.h1`
   width: 15%;
   font-size: 1.5rem;
+
+  @media (max-width: 876px) {
+    width: 100%;
+    text-align: center;
+    margin: 4px auto;
+  }
 `;
 
-const Styh2 = styled.h2``;
+const Styh2 = styled.h2`
+  @media (max-width: 876px) {
+    margin: 0 auto;
+  }
+`;
 
 const StyNav = styled.nav`
   display: flex;
   flex-direction: column;
-  a {
-  }
 `;
 
 const StyDarkMode = styled.div``;
