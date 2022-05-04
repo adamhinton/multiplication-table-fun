@@ -39,7 +39,7 @@ const SingleTableItem = (props) => {
 
 export default SingleTableItem;
 
-const StySingleTableItem = styled.article`
+const StySingleTableItem = styled.li`
   border: 1px solid black;
   background-color: #bef8f8;
   color: black;

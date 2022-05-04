@@ -33,7 +33,7 @@ const MultTableContainer = (props) => {
 
 export default MultTableContainer;
 
-const StyledTableContainer = styled.main`
+const StyledTableContainer = styled.ol`
   display: flex;
   flex-direction: column;
   align-items: center;
