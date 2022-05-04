@@ -33,11 +33,26 @@ const MultTableContainer = (props) => {
 
 export default MultTableContainer;
 
-const StyledTableContainer = styled.main`
+const StyledTableContainer = styled.ol`
+  max-width: 1200px;
   display: flex;
-  flex-direction: column;
+  flex-direction: column-wrap;
   align-items: center;
   flex-wrap: wrap;
-  margin: 0 10%;
-  height: 80vh;
+  margin: 0 20%;
+  height: auto;
+  padding-inline-start: 0;
+  justify-content: center;
+
+  @media (max-width: 1250px) {
+    margin: 0 10%;
+  }
+
+  @media (max-width: 1000px) {
+    height: 100%;
+    flex-direction: row;
+  }
+  @media (max-width: 876px) {
+    margin: 0 2%;
+  }
 `;

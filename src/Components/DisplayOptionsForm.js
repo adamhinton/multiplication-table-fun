@@ -82,7 +82,7 @@ const DisplayOptionsForm = (props) => {
         <StyLabel htmlFor="checkbox" data-testid="pokedisplay-checkbox-label">
           Display Pokemon:
         </StyLabel>
-        <StyInput
+        <input
           type="checkbox"
           name="checkbox"
           data-testid="pokedisplay-checkbox-input"
@@ -95,11 +95,14 @@ const DisplayOptionsForm = (props) => {
               },
             });
           }}
-        ></StyInput>
+        ></input>
       </div>
 
       <div>
-        <StyInput type="submit" data-testid="form-submit-button"></StyInput>
+        <StyledSubmitBtn
+          type="submit"
+          data-testid="form-submit-button"
+        ></StyledSubmitBtn>
       </div>
     </StyForm>
   );
@@ -112,7 +115,13 @@ const StyForm = styled.form`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 2%;
+  padding: 0.75% 0;
+  max-width: 600px;
+  margin: 0.5% auto;
+
+  @media (max-width: 800px) {
+    width: 70%;
+  }
 `;
 
 const StyLabel = styled.label`
@@ -120,5 +129,10 @@ const StyLabel = styled.label`
 `;
 
 const StyInput = styled.input`
+  color: black;
+  width: 75px;
+`;
+
+const StyledSubmitBtn = styled.input`
   color: black;
 `;

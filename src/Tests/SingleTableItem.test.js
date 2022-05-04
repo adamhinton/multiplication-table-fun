@@ -20,7 +20,10 @@ test("[2] Correct numbers appear in component", () => {
     </Provider>
   );
 
-  const expectedSolution = screen.getByText("10 x 7 = 70");
+  const expectedFormula = screen.getByText("x 7 =");
+  const expectedSolution = screen.getByText("70");
+
+  expect(expectedFormula).toBeVisible();
   expect(expectedSolution).toBeVisible();
 });
 

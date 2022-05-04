@@ -20,7 +20,9 @@ const SingleTableItem = (props) => {
       data-testid="single-table-item"
       isDisplayPokemon={isDisplayPokemon}
     >
-      {toBeMultiplied} x {currentMultiplier} = {total}
+      <TextContainerDiv>
+        x {currentMultiplier} =<StyDisplayTotal> {total} </StyDisplayTotal>
+      </TextContainerDiv>
       {/* contains pokemon img if user has toggled that option */}
       {isDisplayPokemon && (
         <StyPokemonFigure>
@@ -39,20 +41,33 @@ const SingleTableItem = (props) => {
 
 export default SingleTableItem;
 
-const StySingleTableItem = styled.article`
+const StySingleTableItem = styled.li`
   border: 1px solid black;
   background-color: #bef8f8;
   color: black;
   padding: 2% auto;
   display: flex;
   flex-direction: column;
+  text-align: center;
   align-items: center;
+  justify-content: center;
   width: 150px;
   height: ${(props) => {
     return props.isDisplayPokemon ? "150px" : "auto";
   }};
+  margin: 0.35%;
 `;
 
 const StyPokemonFigure = styled.figure`
   width: 80%;
+`;
+
+const StyDisplayTotal = styled.strong`
+  color: black;
+  font-size: 18px;
+`;
+
+const TextContainerDiv = styled.div`
+  color: black;
+  font-size: 14px;
 `;
