@@ -20,8 +20,10 @@ const SingleTableItem = (props) => {
       data-testid="single-table-item"
       isDisplayPokemon={isDisplayPokemon}
     >
-      {toBeMultiplied} x {currentMultiplier} =
-      <StyDisplayTotal> {total} </StyDisplayTotal>
+      <div>
+        {toBeMultiplied} x {currentMultiplier} =
+        <StyDisplayTotal> {total} </StyDisplayTotal>
+      </div>
       {/* contains pokemon img if user has toggled that option */}
       {isDisplayPokemon && (
         <StyPokemonFigure>
@@ -46,8 +48,9 @@ const StySingleTableItem = styled.li`
   color: black;
   padding: 2% auto;
   display: flex;
-  flex-direction: row;
-  /* align-items: center; */
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
   justify-content: center;
   width: 150px;
   height: ${(props) => {
