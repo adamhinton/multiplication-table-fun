@@ -51,4 +51,7 @@ const StyledTableContainer = styled.ol`
     height: 100%;
     flex-direction: row;
   }
+  @media (max-width: 876px) {
+    margin: 0 2%;
+  }
 `;
