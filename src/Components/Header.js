@@ -76,7 +76,7 @@ const StyNav = styled.nav`
   flex-direction: column;
 `;
 
-const StyDarkModeToggleButton = styled.div`
+const StyDarkModeToggleButton = styled.button`
   background-color: var(--button-bg);
   color: var(--button-text);
   cursor: pointer;
