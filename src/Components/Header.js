@@ -10,9 +10,6 @@ const Header = (props) => {
       <StyH1>Multiplication Table Fun</StyH1>
       <Styh2>Author: Adam Hinton</Styh2>
       <StyNav>{linkMaker(linksArray)}</StyNav>
-      {/* <StyDarkMode>Dark Mode (PH)</StyDarkMode> */}
-      {/* <BsSun color="#ff0" size="24" title="Switch to light mode" /> */}
-
       {/* TODO here:
   -Add dummy onclick to toggle dark mode
   -Add dummy dark mode state for manual testing
