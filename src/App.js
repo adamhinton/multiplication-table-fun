@@ -8,6 +8,7 @@ import theme from "styled-theming";
 
 function App() {
   return (
+    //This has a dummy theme, fill out later
     <ThemeProvider theme={{ theme: "light" }}>
       <div className="App">
         <Header />
