@@ -13,6 +13,10 @@ const Header = (props) => {
       {/* <StyDarkMode>Dark Mode (PH)</StyDarkMode> */}
       {/* <BsSun color="#ff0" size="24" title="Switch to light mode" /> */}
 
+      {/* TODO here:
+  -Add dummy onclick to toggle dark mode
+  -Add dummy dark mode state for manual testing
+*/}
       <div>
         <StyDarkModeToggleButton
           className="toggle_btn"
