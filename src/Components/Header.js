@@ -13,7 +13,7 @@ const Header = (props) => {
       {/* <StyDarkMode>Dark Mode (PH)</StyDarkMode> */}
       {/* <BsSun color="#ff0" size="24" title="Switch to light mode" /> */}
 
-      <button
+      <StyDarkModeToggleButton
         className="toggle_btn"
         data-testid="toggle_btn"
         onClick={() => {
@@ -21,7 +21,7 @@ const Header = (props) => {
         }}
       >
         <BsSun color="#ff0" size="24" title="Switch to light mode" />
-      </button>
+      </StyDarkModeToggleButton>
     </StyHeader>
   );
 };
@@ -76,4 +76,10 @@ const StyNav = styled.nav`
   flex-direction: column;
 `;
 
-const StyDarkMode = styled.div``;
+const StyDarkModeToggleButton = styled.div`
+  background-color: var(--button-bg);
+  color: var(--button-text);
+  cursor: pointer;
+  border: none;
+  border-radius: 20%;
+`;
