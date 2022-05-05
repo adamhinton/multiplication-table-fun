@@ -22,10 +22,14 @@ const Header = (props) => {
           className="toggle_btn"
           data-testid="toggle_btn"
           onClick={() => {
-            // setDarkMode(!isDarkMode);
+            setIsDarkMode(!isDarkMode);
           }}
         >
-          <BsSun color="#ff0" size="24" title="Switch to light mode" />
+          {isDarkMode ? (
+            <BsSun color="#ff0" size="24" title="Switch to light mode" />
+          ) : (
+            <BsMoon size="24" title="Switch to dark mode" />
+          )}
         </StyDarkModeToggleButton>
       </div>
     </StyHeader>
