@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import linksArray from "../utils/HeaderUtils/linksArray";
 import linkMaker from "../utils/HeaderUtils/linkMaker";
+import { BsMoon, BsSun } from "react-icons/bs";
 
 const Header = (props) => {
   return (
