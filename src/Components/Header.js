@@ -13,7 +13,7 @@ const Header = (props) => {
       {/* <StyDarkMode>Dark Mode (PH)</StyDarkMode> */}
       {/* <BsSun color="#ff0" size="24" title="Switch to light mode" /> */}
 
-      <StyDarkModeContainerDiv>
+      <div>
         <StyDarkModeToggleButton
           className="toggle_btn"
           data-testid="toggle_btn"
@@ -23,7 +23,7 @@ const Header = (props) => {
         >
           <BsSun color="#ff0" size="24" title="Switch to light mode" />
         </StyDarkModeToggleButton>
-      </StyDarkModeContainerDiv>
+      </div>
     </StyHeader>
   );
 };
@@ -77,11 +77,6 @@ const StyNav = styled.nav`
   display: flex;
   flex-direction: column;
   color: rgb(221, 203, 203);
-`;
-
-const StyDarkModeContainerDiv = styled.div`
-  font-size: 1.2rem;
-  font-weight: 600;
 `;
 
 const StyDarkModeToggleButton = styled.button`
