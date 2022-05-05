@@ -11,7 +11,17 @@ const Header = (props) => {
       <Styh2>Author: Adam Hinton</Styh2>
       <StyNav>{linkMaker(linksArray)}</StyNav>
       {/* <StyDarkMode>Dark Mode (PH)</StyDarkMode> */}
-      <BsSun color="#ff0" size="24" title="Switch to light mode" />
+      {/* <BsSun color="#ff0" size="24" title="Switch to light mode" /> */}
+
+      <button
+        className="toggle_btn"
+        data-testid="toggle_btn"
+        onClick={() => {
+          // setDarkMode(!isDarkMode);
+        }}
+      >
+        <BsSun color="#ff0" size="24" title="Switch to light mode" />
+      </button>
     </StyHeader>
   );
 };
