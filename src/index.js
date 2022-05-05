@@ -1,11 +1,13 @@
 import React from "react";
-import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
-// import store from "./Redux/store";
 import configureStore from "./Redux/store";
 import { Provider } from "react-redux";
 import reportWebVitals from "./reportWebVitals";
+import { createRoot } from "react-dom/client";
+
+const container = document.getElementById("app");
+const root = createRoot(container); // createRoot(container!)
 
 const initialState = {
   tableValues: {
@@ -19,11 +21,10 @@ const initialState = {
 
 const store = configureStore(initialState);
 
-ReactDOM.render(
+root.render(
   <Provider store={store}>
     <App />
-  </Provider>,
-  document.getElementById("root")
+  </Provider>
 );
 
 reportWebVitals();
