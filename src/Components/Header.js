@@ -5,6 +5,8 @@ import { BsMoon, BsSun } from "react-icons/bs";
 import { useState } from "react";
 
 const Header = (props) => {
+  const [isDarkMode, setIsDarkMode] = useState(false);
+
   return (
     <StyHeader>
       {/* TODO: Add dummy placeholder login/registration links, or at least make sure there's room for them */}
