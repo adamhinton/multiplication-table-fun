@@ -1,15 +1,39 @@
 import styled from "styled-components";
 import linksArray from "../utils/HeaderUtils/linksArray";
 import linkMaker from "../utils/HeaderUtils/linkMaker";
+import { BsMoon, BsSun } from "react-icons/bs";
+import { useState } from "react";
 
 const Header = (props) => {
+  const [isDarkMode, setIsDarkMode] = useState(false);
+
   return (
     <StyHeader>
       {/* TODO: Add dummy placeholder login/registration links, or at least make sure there's room for them */}
       <StyH1>Multiplication Table Fun</StyH1>
       <Styh2>Author: Adam Hinton</Styh2>
       <StyNav>{linkMaker(linksArray)}</StyNav>
-      <StyDarkMode>Dark Mode (PH)</StyDarkMode>
+      {/* TODO: */}
+      {/* -Add darkMode to redux - make a hook and reducer */}
+      {/* -Store preference in localStorage */}
+      {/* -make it so this actually changes styling */}
+      {/* -Form pulls in preference from redux */}
+      {/* -MTC pulls darkMode state from redux and uses that on its own background, then passes it to STI.js */}
+      <div>
+        <StyDarkModeToggleButton
+          className="toggle_btn"
+          data-testid="toggle_btn"
+          onClick={() => {
+            setIsDarkMode(!isDarkMode);
+          }}
+        >
+          {isDarkMode ? (
+            <BsSun color="#ff0" size="24" title="Switch to light mode" />
+          ) : (
+            <BsMoon size="24" title="Switch to dark mode" />
+          )}
+        </StyDarkModeToggleButton>
+      </div>
     </StyHeader>
   );
 };
@@ -62,6 +86,13 @@ const Styh2 = styled.h2`
 const StyNav = styled.nav`
   display: flex;
   flex-direction: column;
+  color: rgb(221, 203, 203);
 `;
 
-const StyDarkMode = styled.div``;
+const StyDarkModeToggleButton = styled.button`
+  background-color: var(--button-bg);
+  color: var(--button-text);
+  cursor: pointer;
+  border: none;
+  border-radius: 20%;
+`;
