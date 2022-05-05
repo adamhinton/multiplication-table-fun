@@ -19,7 +19,6 @@ const Header = (props) => {
       {/* -make it so this actually changes styling */}
       {/* -Form pulls in preference from redux */}
       {/* -MTC pulls darkMode state from redux and uses that on its own background, then passes it to STI.js */}
-      }
       <div>
         <StyDarkModeToggleButton
           className="toggle_btn"
