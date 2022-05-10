@@ -4,6 +4,8 @@ import linkMaker from "../utils/HeaderUtils/linkMaker";
 import { BsMoon, BsSun } from "react-icons/bs";
 import { useState } from "react";
 
+// DarkMode: This will both read dark mode from redux and dispatch dark mode actions based on click
+
 const Header = (props) => {
   const [isDarkMode, setIsDarkMode] = useState(false);
 
