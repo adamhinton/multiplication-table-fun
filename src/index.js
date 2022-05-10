@@ -17,6 +17,7 @@ const initialState = {
   displayPokemon: {
     isDisplayPokemon: false,
   },
+  isDarkMode: false,
 };
 
 const store = configureStore(initialState);
