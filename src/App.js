@@ -14,7 +14,7 @@ function App() {
 
   return (
     //This has a dummy theme, fill out later
-    <ThemeProvider theme={{ theme: "light" }}>
+    <ThemeProvider theme={{ theme }}>
       <div className="App">
         <Header />
         <DisplayOptionsForm />
