@@ -9,7 +9,7 @@ import { useState } from "react";
 
 function App() {
   //change this to useDarKMode() later
-  const [theme, themeToggler] = useState("lightEMPT:");
+  const [theme, themeToggler] = useState("light");
   const themeMode = theme === "light" ? lightTheme : darkTheme;
 
   return (
