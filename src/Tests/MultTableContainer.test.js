@@ -5,7 +5,7 @@ import { Provider } from "react-redux";
 
 const store = configureStore();
 
-test("[1] Renders without errors", () => {
+test.skip("[1] Renders without errors", () => {
   render(
     <Provider store={store}>
       <MultTableContainer />
@@ -13,7 +13,7 @@ test("[1] Renders without errors", () => {
   );
 });
 
-test("[2] At least one multiplication table item appears on screen", () => {
+test.skip("[2] At least one multiplication table item appears on screen", () => {
   render(
     <Provider store={store}>
       <MultTableContainer />
