@@ -8,10 +8,12 @@
 import { combineReducers } from "@reduxjs/toolkit";
 import tableValuesReducer from "./tableValuesSlice";
 import pokemonDisplayToggleReducer from "./pokemonDisplayOptionSlice";
+import darkModeToggleReducer from "./isDarkModeSlice";
 
 const rootReducer = combineReducers({
   tableValues: tableValuesReducer,
   displayPokemon: pokemonDisplayToggleReducer,
+  isDarkMode: darkModeToggleReducer,
 });
 
 export default rootReducer;
