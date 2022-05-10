@@ -5,7 +5,7 @@ import { Provider } from "react-redux";
 
 const store = configureStore();
 
-test("[1] Renders without errors", () => {
+test.skip("[1] Renders without errors", () => {
   render(
     <Provider store={store}>
       <SingleTableItem />
@@ -13,7 +13,7 @@ test("[1] Renders without errors", () => {
   );
 });
 
-test("[2] Correct numbers appear in component", () => {
+test.skip("[2] Correct numbers appear in component", () => {
   render(
     <Provider store={store}>
       <SingleTableItem toBeMultiplied={10} currentMultiplier={7} />
@@ -27,7 +27,7 @@ test("[2] Correct numbers appear in component", () => {
   expect(expectedSolution).toBeVisible();
 });
 
-test("[3] Pokemon image toggles based on user preference", async () => {
+test.skip("[3] Pokemon image toggles based on user preference", async () => {
   const { rerender } = render(
     <Provider store={store}>
       <SingleTableItem
