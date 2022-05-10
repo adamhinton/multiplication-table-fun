@@ -8,7 +8,10 @@ import { useState } from "react";
 // console.log("theme:", theme);
 
 function App() {
-  const [theme, themeToggler] = useDarkMode();
+  //change this to useDarKMode() later
+  const [theme, themeToggler] = useState("light");
+  const themeMode = theme === "light" ? lightTheme : darkTheme;
+
   return (
     //This has a dummy theme, fill out later
     <ThemeProvider theme={{ theme: "light" }}>
