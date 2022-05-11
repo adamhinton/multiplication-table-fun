@@ -7,7 +7,7 @@ import { useState } from "react";
 // DarkMode: This will both read dark mode from redux and dispatch dark mode actions based on click
 
 const Header = (props) => {
-  const [isDarkMode, setIsDarkMode] = useState(false);
+  // const [isDarkMode, setIsDarkMode] = useState(false);
 
   return (
     <StyHeader>
@@ -22,7 +22,7 @@ const Header = (props) => {
       {/* -Form pulls in preference from redux */}
       {/* -MTC pulls darkMode state from redux and uses that on its own background, then passes it to STI.js */}
       <div>
-        <StyDarkModeToggleButton
+        {/* <StyDarkModeToggleButton
           className="toggle_btn"
           data-testid="toggle_btn"
           onClick={() => {
@@ -37,7 +37,7 @@ const Header = (props) => {
           ) : (
             <BsMoon size="24" title="Switch to dark mode" />
           )}
-        </StyDarkModeToggleButton>
+        </StyDarkModeToggleButton> */}
       </div>
     </StyHeader>
   );
