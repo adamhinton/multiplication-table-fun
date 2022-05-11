@@ -6,6 +6,12 @@ import { useState } from "react";
 
 // DarkMode: This will both read dark mode from redux and dispatch dark mode actions based on click
 
+// PLAN:
+// Pull in dark mode state from Redux
+// Show toggle button based on this
+// Toggle button click:
+//-Dispatch dark mode change
+
 const Header = (props) => {
   // const [isDarkMode, setIsDarkMode] = useState(false);
 
