@@ -26,7 +26,10 @@ const Header = (props) => {
           className="toggle_btn"
           data-testid="toggle_btn"
           onClick={() => {
-            setIsDarkMode(!isDarkMode);
+            // setIsDarkMode(!isDarkMode);
+            console.log(
+              "don't forget to put functionality in dark mode button"
+            );
           }}
         >
           {isDarkMode ? (
