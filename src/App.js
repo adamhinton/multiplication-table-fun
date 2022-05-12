@@ -49,9 +49,7 @@ export const darkTheme = {
 export default App;
 
 const StyMain = styled.main`
-  background-color: ${(props) => {
-    // return props.isDisplayPokemon ? "150px" : "auto";
-    // console.log("props:", props);
-    console.log("props.theme:", props.theme);
+  background-color: ${({ theme }) => {
+    return theme.themeMode.backgroundColor;
   }};
 `;
