@@ -1,7 +1,7 @@
 import Header from "./Components/Header";
 import DisplayOptionsForm from "./Components/DisplayOptionsForm";
 import MultTableContainer from "./Components/MultTableContainer";
-import { ThemeProvider } from "styled-components";
+import styled, { ThemeProvider } from "styled-components";
 import { useState } from "react";
 
 //DarkMode plan:
