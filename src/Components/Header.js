@@ -18,6 +18,7 @@ const selectState = (state) => state;
 
 const Header = (props) => {
   const { isDarkMode } = useSelector(selectState);
+  const dispatch = useDispatch();
 
   console.log("Header isDarkMode:", isDarkMode);
 
