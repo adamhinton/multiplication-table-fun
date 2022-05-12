@@ -16,10 +16,7 @@ const selectState = (state) => state;
 function App() {
   const stateValues = useSelector(selectState);
   const { isDarkMode } = stateValues;
-  console.log("isDarkMode:", isDarkMode);
 
-  //change this to useDarKMode() later
-  const [theme, themeToggler] = useState("light");
   const themeMode = isDarkMode ? darkTheme : lightTheme;
 
   return (
