@@ -44,7 +44,7 @@ export default SingleTableItem;
 const StySingleTableItem = styled.li`
   border: 1px solid black;
   background-color: ${({ theme }) => {
-    return theme.themeMode.backgroundColor;
+    return theme.themeMode.cardBackgroundColor;
   }};
   color: black;
   padding: 2% auto;

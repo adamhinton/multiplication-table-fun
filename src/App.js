@@ -33,13 +33,13 @@ function App() {
 
 export const lightTheme = {
   mainBackgroundColor: "#3c9893",
-  backgroundColor: "blue",
+  cardBackgroundColor: "#bef8f8",
   textColor: "green",
 };
 
 export const darkTheme = {
   mainBackgroundColor: "#2d3c42",
-  backgroundColor: "orange",
+  cardBackgroundColor: "orange",
   textColor: "pink",
 };
 
