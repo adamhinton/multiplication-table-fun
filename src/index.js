@@ -7,7 +7,7 @@ import reportWebVitals from "./reportWebVitals";
 import { createRoot } from "react-dom/client";
 
 const container = document.getElementById("app");
-const root = createRoot(container); // createRoot(container!)
+const root = createRoot(container);
 
 const initialState = {
   tableValues: {
@@ -17,6 +17,7 @@ const initialState = {
   displayPokemon: {
     isDisplayPokemon: false,
   },
+  isDarkMode: false,
 };
 
 const store = configureStore(initialState);

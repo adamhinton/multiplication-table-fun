@@ -2,10 +2,14 @@ import styled from "styled-components";
 import linksArray from "../utils/HeaderUtils/linksArray";
 import linkMaker from "../utils/HeaderUtils/linkMaker";
 import { BsMoon, BsSun } from "react-icons/bs";
-import { useState } from "react";
+import { useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 
-const Header = (props) => {
-  const [isDarkMode, setIsDarkMode] = useState(false);
+const selectState = (state) => state;
+
+const Header = () => {
+  const { isDarkMode } = useSelector(selectState);
+  const dispatch = useDispatch();
 
   return (
     <StyHeader>
@@ -13,18 +17,13 @@ const Header = (props) => {
       <StyH1>Multiplication Table Fun</StyH1>
       <Styh2>Author: Adam Hinton</Styh2>
       <StyNav>{linkMaker(linksArray)}</StyNav>
-      {/* TODO: */}
-      {/* -Add darkMode to redux - make a hook and reducer */}
-      {/* -Store preference in localStorage */}
-      {/* -make it so this actually changes styling */}
-      {/* -Form pulls in preference from redux */}
-      {/* -MTC pulls darkMode state from redux and uses that on its own background, then passes it to STI.js */}
+
       <div>
         <StyDarkModeToggleButton
           className="toggle_btn"
           data-testid="toggle_btn"
           onClick={() => {
-            setIsDarkMode(!isDarkMode);
+            dispatch({ payload: isDarkMode, type: "TOGGLEDARKMODE" });
           }}
         >
           {isDarkMode ? (
