@@ -13,7 +13,6 @@ test("[1] Sanity checks", () => {
 
 //not sure whether wrapping this is best practices since it's a unit test
 test("[2] Renders without errors", () => {
-  // console.log("store:", store);
   render(
     <Provider store={store}>
       <App />

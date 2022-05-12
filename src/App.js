@@ -5,8 +5,6 @@ import { ThemeProvider } from "styled-components";
 import { useState } from "react";
 
 //DarkMode plan:
-//-set up useDarkMode hook
-//needs fxnality to change darkMode in rest of app. Either set up toggle function to change theme (smashingmagazine) or use redux. Probably just togglefunction that passes up and down through Provider.
 //-Set up correct colors and stuff in lightTheme and darkTheme
 
 // ^ see reducer.js for further planning on redux

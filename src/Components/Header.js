@@ -5,14 +5,6 @@ import { BsMoon, BsSun } from "react-icons/bs";
 import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
 
-// DarkMode: This will both read dark mode from redux and dispatch dark mode actions based on click
-
-// PLAN:
-// Pull in dark mode state from Redux
-// Show toggle button based on this
-// Toggle button click:
-//-Dispatch dark mode change
-
 const selectState = (state) => state;
 
 const Header = () => {
@@ -25,12 +17,7 @@ const Header = () => {
       <StyH1>Multiplication Table Fun</StyH1>
       <Styh2>Author: Adam Hinton</Styh2>
       <StyNav>{linkMaker(linksArray)}</StyNav>
-      {/* TODO: */}
-      {/* -Add darkMode to redux - make a hook and reducer */}
-      {/* -Store preference in localStorage */}
-      {/* -make it so this actually changes styling */}
-      {/* -Form pulls in preference from redux */}
-      {/* -MTC pulls darkMode state from redux and uses that on its own background, then passes it to STI.js */}
+
       <div>
         <StyDarkModeToggleButton
           className="toggle_btn"
