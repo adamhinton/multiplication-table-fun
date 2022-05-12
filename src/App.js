@@ -38,6 +38,7 @@ export const lightTheme = {
 };
 
 export const darkTheme = {
+  mainBackgroundColor: "#2d3c42",
   backgroundColor: "orange",
   textColor: "pink",
 };
