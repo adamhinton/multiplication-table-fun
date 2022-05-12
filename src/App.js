@@ -24,13 +24,11 @@ function App() {
   return (
     //This has a dummy theme, fill out later
     <ThemeProvider theme={{ themeMode }}>
-      <div className="App">
-        <Header />
-        <DisplayOptionsForm />
-        <StyMain>
-          <MultTableContainer />
-        </StyMain>
-      </div>
+      <Header />
+      <DisplayOptionsForm />
+      <StyMain>
+        <MultTableContainer />
+      </StyMain>
     </ThemeProvider>
   );
 }
