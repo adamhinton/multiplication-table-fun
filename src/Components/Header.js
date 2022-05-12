@@ -35,14 +35,12 @@ const Header = (props) => {
       {/* -Form pulls in preference from redux */}
       {/* -MTC pulls darkMode state from redux and uses that on its own background, then passes it to STI.js */}
       <div>
-        {/* <StyDarkModeToggleButton
+        <StyDarkModeToggleButton
           className="toggle_btn"
           data-testid="toggle_btn"
           onClick={() => {
             // setIsDarkMode(!isDarkMode);
-            console.log(
-              "don't forget to put functionality in dark mode button"
-            );
+            dispatch({ payload: isDarkMode, type: "TOGGLEDARKMODE" });
           }}
         >
           {isDarkMode ? (
@@ -50,7 +48,7 @@ const Header = (props) => {
           ) : (
             <BsMoon size="24" title="Switch to dark mode" />
           )}
-        </StyDarkModeToggleButton> */}
+        </StyDarkModeToggleButton>
       </div>
     </StyHeader>
   );
