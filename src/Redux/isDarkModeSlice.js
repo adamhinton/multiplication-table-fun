@@ -3,7 +3,7 @@ const TOGGLEDARKMODE = "TOGGLEDARKMODE";
 const darkModeToggleReducer = (state, action) => {
   switch (action.type) {
     case TOGGLEDARKMODE: {
-      return !state.isDarkMode;
+      return !state;
     }
     default:
       return false;
