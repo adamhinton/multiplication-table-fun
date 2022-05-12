@@ -3,6 +3,7 @@ import DisplayOptionsForm from "./Components/DisplayOptionsForm";
 import MultTableContainer from "./Components/MultTableContainer";
 import styled, { ThemeProvider } from "styled-components";
 import { useState } from "react";
+import { useSelector } from "react-redux";
 
 //DarkMode plan:
 //-Set up correct colors and stuff in lightTheme and darkTheme
