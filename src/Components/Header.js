@@ -4,6 +4,7 @@ import linkMaker from "../utils/HeaderUtils/linkMaker";
 import { BsMoon, BsSun } from "react-icons/bs";
 import { useState } from "react";
 import { useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 
 // DarkMode: This will both read dark mode from redux and dispatch dark mode actions based on click
 
