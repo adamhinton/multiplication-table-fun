@@ -27,7 +27,9 @@ function App() {
       <div className="App">
         <Header />
         <DisplayOptionsForm />
-        <MultTableContainer />
+        <StyMain>
+          <MultTableContainer />
+        </StyMain>
       </div>
     </ThemeProvider>
   );
@@ -44,3 +46,10 @@ export const darkTheme = {
 };
 
 export default App;
+
+const StyMain = styled.main`
+  background-color: ${(props) => {
+    // return props.isDisplayPokemon ? "150px" : "auto";
+    console.log("props:", props);
+  }};
+`;
