@@ -13,8 +13,12 @@ import { useSelector } from "react-redux";
 // Toggle button click:
 //-Dispatch dark mode change
 
+const selectState = (state) => state;
+
 const Header = (props) => {
-  // const [isDarkMode, setIsDarkMode] = useState(false);
+  const { isDarkMode } = useSelector(selectState);
+
+  console.log("Header isDarkMode:", isDarkMode);
 
   return (
     <StyHeader>
