@@ -8,6 +8,7 @@ const MultTableContainer = (props) => {
   //pulls in global state from Redux store
   const state = useSelector(selectState);
   const { multiplier, limit } = state.tableValues;
+  const { isDarkMode } = state.tableValues;
   const isDisplayPokemon = state.displayPokemon.isDisplayPokemon;
 
   //creating an array to map over to generate multiplication table
