@@ -50,5 +50,6 @@ const GlobalStyle = createGlobalStyle`
     background-color: ${({ theme }) => {
       return theme.themeMode.mainBackgroundColor;
     }};
+    font-family: Ubuntu, sans-serif;
   }
   `;
