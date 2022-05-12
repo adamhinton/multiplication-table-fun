@@ -36,6 +36,7 @@ function App() {
 }
 
 export const lightTheme = {
+  mainBackgroundColor: "#3c9893",
   backgroundColor: "blue",
   textColor: "green",
 };
@@ -50,6 +51,7 @@ export default App;
 const StyMain = styled.main`
   background-color: ${(props) => {
     // return props.isDisplayPokemon ? "150px" : "auto";
-    console.log("props:", props);
+    // console.log("props:", props);
+    console.log("props.theme:", props.theme);
   }};
 `;
