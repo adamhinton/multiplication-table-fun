@@ -26,9 +26,7 @@ function App() {
     <ThemeProvider theme={{ themeMode }}>
       <Header />
       <DisplayOptionsForm />
-      <StyMain>
-        <MultTableContainer />
-      </StyMain>
+      <MultTableContainer />
     </ThemeProvider>
   );
 }
@@ -46,8 +44,8 @@ export const darkTheme = {
 
 export default App;
 
-const StyMain = styled.main`
-  background-color: ${({ theme }) => {
-    return theme.themeMode.backgroundColor;
-  }};
-`;
+// const StyMain = styled.main`
+//   background-color: ${({ theme }) => {
+//     return theme.themeMode.backgroundColor;
+//   }};
+// `;
