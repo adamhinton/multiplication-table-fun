@@ -47,12 +47,6 @@ export const darkTheme = {
 
 export default App;
 
-// const StyMain = styled.main`;
-//   background-color: ${({ theme }) => {
-//     return theme.themeMode.backgroundColor;
-//   }};
-// `;
-
 const GlobalStyle = createGlobalStyle`
   body {
     background-color: ${({ theme }) => {
