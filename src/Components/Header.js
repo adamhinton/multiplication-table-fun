@@ -2,7 +2,6 @@ import styled from "styled-components";
 import linksArray from "../utils/HeaderUtils/linksArray";
 import linkMaker from "../utils/HeaderUtils/linkMaker";
 import { BsMoon, BsSun } from "react-icons/bs";
-import { useState } from "react";
 import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
 
@@ -16,11 +15,9 @@ import { useDispatch } from "react-redux";
 
 const selectState = (state) => state;
 
-const Header = (props) => {
+const Header = () => {
   const { isDarkMode } = useSelector(selectState);
   const dispatch = useDispatch();
-
-  console.log("Header isDarkMode:", isDarkMode);
 
   return (
     <StyHeader>
@@ -39,7 +36,6 @@ const Header = (props) => {
           className="toggle_btn"
           data-testid="toggle_btn"
           onClick={() => {
-            // setIsDarkMode(!isDarkMode);
             dispatch({ payload: isDarkMode, type: "TOGGLEDARKMODE" });
           }}
         >
