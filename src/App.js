@@ -4,6 +4,7 @@ import MultTableContainer from "./Components/MultTableContainer";
 import styled, { ThemeProvider } from "styled-components";
 import { useState } from "react";
 import { useSelector } from "react-redux";
+import { createGlobalStyle } from "styled-components";
 
 //DarkMode plan:
 //-Set up correct colors and stuff in lightTheme and darkTheme
@@ -19,11 +20,13 @@ function App() {
 
   //change this to useDarKMode() later
   const [theme, themeToggler] = useState("light");
-  const themeMode = theme === "light" ? lightTheme : darkTheme;
+  const themeMode = isDarkMode ? darkTheme : lightTheme;
 
   return (
     //This has a dummy theme, fill out later
+
     <ThemeProvider theme={{ themeMode }}>
+      <GlobalStyle />
       <Header />
       <DisplayOptionsForm />
       <MultTableContainer />
@@ -43,9 +46,3 @@ export const darkTheme = {
 };
 
 export default App;
-
-// const StyMain = styled.main`
-//   background-color: ${({ theme }) => {
-//     return theme.themeMode.backgroundColor;
-//   }};
-// `;
