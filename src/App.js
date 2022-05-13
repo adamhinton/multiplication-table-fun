@@ -37,7 +37,7 @@ export const lightTheme = {
   textColor: "black",
   inputTextColor: "black",
   inputBackgroundColor: "white",
-  inputBorder: "",
+  inputBorder: "", //intentionally blank
 };
 
 export const darkTheme = {
