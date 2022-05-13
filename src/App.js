@@ -37,6 +37,7 @@ export const lightTheme = {
   textColor: "black",
   inputTextColor: "black",
   inputBackgroundColor: "white",
+  inputBorder: "",
 };
 
 export const darkTheme = {
@@ -45,6 +46,7 @@ export const darkTheme = {
   textColor: "hsla(0,0%,100%,.721)",
   inputTextColor: "rgb(221, 203, 203)",
   inputBackgroundColor: "rgb(46, 37, 37)",
+  inputBorder: "1px solid white",
 };
 
 export default App;
