@@ -108,6 +108,10 @@ const DisplayOptionsForm = (props) => {
 export default DisplayOptionsForm;
 
 const StyForm = styled.form`
+  div {
+    margin: 3px 0;
+  }
+
   background-color: ${({ theme }) => {
     return theme.themeMode.cardBackgroundColor;
   }};
