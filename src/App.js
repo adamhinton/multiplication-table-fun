@@ -1,8 +1,7 @@
 import Header from "./Components/Header";
 import DisplayOptionsForm from "./Components/DisplayOptionsForm";
 import MultTableContainer from "./Components/MultTableContainer";
-import styled, { ThemeProvider } from "styled-components";
-import { useState } from "react";
+import { ThemeProvider } from "styled-components";
 import { useSelector } from "react-redux";
 import { createGlobalStyle } from "styled-components";
 
