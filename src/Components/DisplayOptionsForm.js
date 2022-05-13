@@ -135,6 +135,13 @@ const StyForm = styled.form`
 
 const StyInput = styled.input`
   width: 75px;
+
+  color: ${({ theme }) => {
+    return theme.themeMode.inputTextColor;
+  }};
+  background-color: ${({ theme }) => {
+    return theme.themeMode.inputBackgroundColor;
+  }};
 `;
 
 // Thanks to the folks at jotform.com for this nice styling:
