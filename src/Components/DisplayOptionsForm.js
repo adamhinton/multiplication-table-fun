@@ -31,9 +31,9 @@ const DisplayOptionsForm = (props) => {
   return (
     <StyForm onSubmit={onSubmit}>
       <div>
-        <StyLabel htmlFor="quantity" data-testid="multiplier-label">
+        <label htmlFor="quantity" data-testid="multiplier-label">
           Multiplier:
-        </StyLabel>
+        </label>
         <StyInput
           type="number"
           name="multiplier"
@@ -52,13 +52,13 @@ const DisplayOptionsForm = (props) => {
       </div>
 
       <div>
-        <StyLabel
+        <label
           htmlFor="quantity"
           value={formValues.tableValues.limit}
           data-testid="display-limit-label"
         >
           Limit:
-        </StyLabel>
+        </label>
         <StyInput
           type="number"
           name="limit"
@@ -79,9 +79,9 @@ const DisplayOptionsForm = (props) => {
       </div>
 
       <div>
-        <StyLabel htmlFor="checkbox" data-testid="pokedisplay-checkbox-label">
+        <label htmlFor="checkbox" data-testid="pokedisplay-checkbox-label">
           Display Pokemon:
-        </StyLabel>
+        </label>
         <input
           type="checkbox"
           name="checkbox"
@@ -99,10 +99,10 @@ const DisplayOptionsForm = (props) => {
       </div>
 
       <div>
-        <StyledSubmitBtn
+        <StySubmitBtn
           type="submit"
           data-testid="form-submit-button"
-        ></StyledSubmitBtn>
+        ></StySubmitBtn>
       </div>
     </StyForm>
   );
@@ -111,7 +111,16 @@ const DisplayOptionsForm = (props) => {
 export default DisplayOptionsForm;
 
 const StyForm = styled.form`
-  background-color: #bef8f8;
+  div {
+    margin: 3px 0;
+  }
+
+  background-color: ${({ theme }) => {
+    return theme.themeMode.cardBackgroundColor;
+  }};
+  color: ${({ theme }) => {
+    return theme.themeMode.textColor;
+  }};
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -124,15 +133,30 @@ const StyForm = styled.form`
   }
 `;
 
-const StyLabel = styled.label`
-  color: black;
-`;
-
 const StyInput = styled.input`
-  color: black;
   width: 75px;
+  /* border: none; */
+  color: ${({ theme }) => {
+    return theme.themeMode.inputTextColor;
+  }};
+  background-color: ${({ theme }) => {
+    return theme.themeMode.inputBackgroundColor;
+  }};
+  border: ${({ theme }) => {
+    return theme.themeMode.inputBorder;
+  }};
+  margin-left: 5px;
 `;
 
-const StyledSubmitBtn = styled.input`
-  color: black;
+// Thanks to the folks at jotform.com for this nice styling:
+// https://www.jotform.com/help/118-how-to-customize-the-submit-button-with-css/
+const StySubmitBtn = styled.input`
+  background: #0066a2;
+  color: white;
+  border-style: outset;
+  border-color: #0066a2;
+  height: 32px;
+  width: 100px;
+  font: bold15px arial, sans-serif;
+  text-shadow: none;
 `;

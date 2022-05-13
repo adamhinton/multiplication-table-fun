@@ -44,9 +44,11 @@ export default SingleTableItem;
 const StySingleTableItem = styled.li`
   border: 1px solid black;
   background-color: ${({ theme }) => {
-    return theme.themeMode.backgroundColor;
+    return theme.themeMode.cardBackgroundColor;
   }};
-  color: black;
+  color: ${({ theme }) => {
+    return theme.themeMode.textColor;
+  }};
   padding: 2% auto;
   display: flex;
   flex-direction: column;
@@ -65,11 +67,9 @@ const StyPokemonFigure = styled.figure`
 `;
 
 const StyDisplayTotal = styled.strong`
-  color: black;
   font-size: 18px;
 `;
 
 const TextContainerDiv = styled.div`
-  color: black;
   font-size: 14px;
 `;
