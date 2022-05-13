@@ -99,7 +99,10 @@ const DisplayOptionsForm = (props) => {
       </div>
 
       <div>
-        <input type="submit" data-testid="form-submit-button"></input>
+        <StySubmitBtn
+          type="submit"
+          data-testid="form-submit-button"
+        ></StySubmitBtn>
       </div>
     </StyForm>
   );
@@ -132,4 +135,15 @@ const StyForm = styled.form`
 
 const StyInput = styled.input`
   width: 75px;
+`;
+
+const StySubmitBtn = styled.input`
+  background: #0066a2;
+  color: white;
+  border-style: outset;
+  border-color: #0066a2;
+  height: 32px;
+  width: 100px;
+  font: bold15px arial, sans-serif;
+  text-shadow: none;
 `;
