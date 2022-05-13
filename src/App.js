@@ -35,12 +35,14 @@ export const lightTheme = {
   mainBackgroundColor: "#3c9893",
   cardBackgroundColor: "#bef8f8",
   textColor: "black",
+  inputTextColor: "black",
 };
 
 export const darkTheme = {
   mainBackgroundColor: "#2d3c42",
   cardBackgroundColor: "#111010",
   textColor: "hsla(0,0%,100%,.721)",
+  inputTextColor: "rgb(221, 203, 203)",
 };
 
 export default App;
