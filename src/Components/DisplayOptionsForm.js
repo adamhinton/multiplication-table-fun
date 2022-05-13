@@ -137,6 +137,8 @@ const StyInput = styled.input`
   width: 75px;
 `;
 
+// Thanks to the folks at jotform.com for this nice styling:
+// https://www.jotform.com/help/118-how-to-customize-the-submit-button-with-css/
 const StySubmitBtn = styled.input`
   background: #0066a2;
   color: white;
