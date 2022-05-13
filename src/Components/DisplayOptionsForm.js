@@ -31,9 +31,9 @@ const DisplayOptionsForm = (props) => {
   return (
     <StyForm onSubmit={onSubmit}>
       <div>
-        <StyLabel htmlFor="quantity" data-testid="multiplier-label">
+        <label htmlFor="quantity" data-testid="multiplier-label">
           Multiplier:
-        </StyLabel>
+        </label>
         <StyInput
           type="number"
           name="multiplier"
@@ -52,13 +52,13 @@ const DisplayOptionsForm = (props) => {
       </div>
 
       <div>
-        <StyLabel
+        <label
           htmlFor="quantity"
           value={formValues.tableValues.limit}
           data-testid="display-limit-label"
         >
           Limit:
-        </StyLabel>
+        </label>
         <StyInput
           type="number"
           name="limit"
@@ -79,9 +79,9 @@ const DisplayOptionsForm = (props) => {
       </div>
 
       <div>
-        <StyLabel htmlFor="checkbox" data-testid="pokedisplay-checkbox-label">
+        <label htmlFor="checkbox" data-testid="pokedisplay-checkbox-label">
           Display Pokemon:
-        </StyLabel>
+        </label>
         <input
           type="checkbox"
           name="checkbox"
@@ -99,10 +99,7 @@ const DisplayOptionsForm = (props) => {
       </div>
 
       <div>
-        <StyledSubmitBtn
-          type="submit"
-          data-testid="form-submit-button"
-        ></StyledSubmitBtn>
+        <input type="submit" data-testid="form-submit-button"></input>
       </div>
     </StyForm>
   );
@@ -111,7 +108,12 @@ const DisplayOptionsForm = (props) => {
 export default DisplayOptionsForm;
 
 const StyForm = styled.form`
-  background-color: #bef8f8;
+  background-color: ${({ theme }) => {
+    return theme.themeMode.cardBackgroundColor;
+  }};
+  color: ${({ theme }) => {
+    return theme.themeMode.textColor;
+  }};
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -124,15 +126,6 @@ const StyForm = styled.form`
   }
 `;
 
-const StyLabel = styled.label`
-  color: black;
-`;
-
 const StyInput = styled.input`
-  color: black;
   width: 75px;
-`;
-
-const StyledSubmitBtn = styled.input`
-  color: black;
 `;
