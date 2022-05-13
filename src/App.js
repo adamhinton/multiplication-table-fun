@@ -36,6 +36,7 @@ export const lightTheme = {
   cardBackgroundColor: "#bef8f8",
   textColor: "black",
   inputTextColor: "black",
+  inputBackgroundColor: "white",
 };
 
 export const darkTheme = {
@@ -43,6 +44,7 @@ export const darkTheme = {
   cardBackgroundColor: "#111010",
   textColor: "hsla(0,0%,100%,.721)",
   inputTextColor: "rgb(221, 203, 203)",
+  inputBackgroundColor: "rgb(46, 37, 37)",
 };
 
 export default App;
