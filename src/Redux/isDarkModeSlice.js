@@ -23,7 +23,7 @@ const isDarkModeStored = () => {
     const item = window.localStorage.getItem(key);
     return item ? JSON.parse(item) : false;
   } catch (error) {
-    console.log("error");
+    console.log("error getting dark mode preference from localStorage");
     return false;
   }
 };
