@@ -5,7 +5,6 @@ import styled from "styled-components";
 
 const SingleTableItem = (props) => {
   const { toBeMultiplied, currentMultiplier, isDisplayPokemon } = props;
-
   const total = toBeMultiplied * currentMultiplier;
 
   // pokedex ids max out at 898,
