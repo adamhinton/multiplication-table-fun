@@ -1,7 +1,6 @@
 const TOGGLEDARKMODE = "TOGGLEDARKMODE";
 
 const darkModeToggleReducer = (state, action) => {
-  console.log("starting action:", action);
   switch (action.type) {
     case TOGGLEDARKMODE: {
       //toggles isDarkMode boolean
