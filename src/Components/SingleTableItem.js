@@ -19,7 +19,7 @@ const SingleTableItem = (props) => {
       data-testid="single-table-item"
       isDisplayPokemon={isDisplayPokemon}
     >
-      <TextContainerDiv>
+      <TextContainerDiv isDisplayPokemon={isDisplayPokemon}>
         x {currentMultiplier} =<StyDisplayTotal> {total} </StyDisplayTotal>
       </TextContainerDiv>
       {/* contains pokemon img if user has toggled that option */}
@@ -71,5 +71,8 @@ const StyDisplayTotal = styled.strong`
 `;
 
 const TextContainerDiv = styled.div`
+  margin-top: ${(props) => {
+    return props.isDisplayPokemon ? "10px" : "0";
+  }};
   font-size: 14px;
 `;
