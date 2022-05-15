@@ -3,3 +3,4 @@
 // Avoids errors from mistyping or changing these in one place but not another
 
 export const NEWMULTIPLIERANDLIMIT = "NEWMULTIPLIERANDLIMIT";
+export const TOGGLEPOKEMONDISPLAYOPTION = "TOGGLEPOKEMONDISPLAYOPTION";

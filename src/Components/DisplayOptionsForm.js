@@ -3,7 +3,10 @@ import styled from "styled-components";
 import { useDispatch } from "react-redux";
 import { useState } from "react";
 import { useSelector } from "react-redux";
-import { NEWMULTIPLIERANDLIMIT } from "../Redux/actionNameVariables";
+import {
+  NEWMULTIPLIERANDLIMIT,
+  TOGGLEPOKEMONDISPLAYOPTION,
+} from "../Redux/actionNameVariables";
 
 const selectState = (state) => state;
 
@@ -24,7 +27,7 @@ const DisplayOptionsForm = (props) => {
       payload: formValues.tableValues,
     });
     dispatch({
-      type: "TOGGLEPOKEMONDISPLAYOPTION",
+      type: TOGGLEPOKEMONDISPLAYOPTION,
       payload: formValues.displayPokemon.isDisplayPokemon,
     });
   };
