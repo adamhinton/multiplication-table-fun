@@ -1,10 +1,12 @@
 const TOGGLEDARKMODE = "TOGGLEDARKMODE";
 
 const darkModeToggleReducer = (state, action) => {
+  // console.log("state:", state);
+  console.log("action.payload:", action.payload);
   switch (action.type) {
     case TOGGLEDARKMODE: {
-      setDarkModeLocalStorage(!state);
-      return !action.payload;
+      setDarkModeLocalStorage(!action.payload.isDarkMode);
+      return !action.payload.isDarkMode;
     }
     default:
       return isDarkModeStored();
