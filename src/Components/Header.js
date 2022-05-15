@@ -48,7 +48,6 @@ const StyHeader = styled.header`
   flex-wrap: wrap;
   align-items: center;
   font-size: 1rem;
-  //TODO: probably make this padding bigger for larger screens
   padding: 0 5%;
   max-width: 1200px;
   margin: auto;
