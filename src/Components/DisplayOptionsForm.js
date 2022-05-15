@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { useDispatch } from "react-redux";
 import { useState } from "react";
 import { useSelector } from "react-redux";
+import { NEWMULTIPLIERANDLIMIT } from "../Redux/actionNameVariables";
 
 const selectState = (state) => state;
 
@@ -19,7 +20,7 @@ const DisplayOptionsForm = (props) => {
     //updates Redux global state with new multiplier, limit and displayPokemon boolean based on user preferences
     e.preventDefault();
     dispatch({
-      type: "NEWMULTIPLIERANDLIMIT",
+      type: NEWMULTIPLIERANDLIMIT,
       payload: formValues.tableValues,
     });
     dispatch({
