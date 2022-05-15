@@ -1,5 +1,6 @@
 // When user hits dark mode button in header, this toggles dark mode/light mode, and sets preference in localStorage
-// On page load, this checks localStorage for darkMode preference
+// On page load, this checks localStorage for darkMode preference.
+// DarkMode is set to true by default if user hasn't made selection.
 
 import { TOGGLEDARKMODE } from "./actionNameVariables";
 
