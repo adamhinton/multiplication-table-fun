@@ -21,8 +21,6 @@ const isDarkModeStored = () => {
 
   try {
     const item = window.localStorage.getItem(key);
-
-    console.log("item:", item);
     return item === "true" ? true : false;
   } catch (error) {
     console.log("error");
