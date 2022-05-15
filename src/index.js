@@ -14,6 +14,7 @@ const isDarkModeStored = () => {
 
   try {
     const item = window.localStorage.getItem(key);
+    console.log("item:", item);
     return item ? JSON.parse(item) : undefined;
   } catch (error) {
     return false;
@@ -26,7 +27,7 @@ const initialState = {
     limit: 30,
   },
   displayPokemon: {
-    isDisplayPokemon: false,
+    isDisplayPokemon: isDarkModeStored(),
   },
   isDarkMode: false,
 };
