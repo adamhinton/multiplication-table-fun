@@ -21,7 +21,6 @@ const initialState = {
 };
 
 const store = configureStore(initialState);
-console.log("initialState:", initialState);
 
 root.render(
   <Provider store={store}>
