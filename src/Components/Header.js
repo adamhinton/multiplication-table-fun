@@ -4,6 +4,7 @@ import linkMaker from "../utils/HeaderUtils/linkMaker";
 import { BsMoon, BsSun } from "react-icons/bs";
 import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
+import { TOGGLEDARKMODE } from "../Redux/actionNameVariables";
 
 const selectState = (state) => state;
 
@@ -23,7 +24,7 @@ const Header = () => {
           className="toggle_btn"
           data-testid="toggle_btn"
           onClick={() => {
-            dispatch({ payload: stateValues, type: "TOGGLEDARKMODE" });
+            dispatch({ payload: stateValues, type: TOGGLEDARKMODE });
           }}
         >
           {stateValues.isDarkMode ? (

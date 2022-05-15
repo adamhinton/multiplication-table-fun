@@ -1,4 +1,4 @@
-const TOGGLEDARKMODE = "TOGGLEDARKMODE";
+import { TOGGLEDARKMODE } from "./actionNameVariables";
 
 const darkModeToggleReducer = (state, action) => {
   switch (action.type) {
