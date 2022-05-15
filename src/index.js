@@ -9,6 +9,17 @@ import { createRoot } from "react-dom/client";
 const container = document.getElementById("app");
 const root = createRoot(container);
 
+const isDarkModeStored = () => {
+  const key = "isDarkMode";
+
+  try {
+    const item = window.localStorage.getItem(key);
+    return item ? JSON.parse(item) : undefined;
+  } catch (error) {
+    return false;
+  }
+};
+
 const initialState = {
   tableValues: {
     multiplier: 10,
