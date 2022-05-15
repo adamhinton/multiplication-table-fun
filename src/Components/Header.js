@@ -9,7 +9,6 @@ const selectState = (state) => state;
 
 const Header = () => {
   const stateValues = useSelector(selectState);
-  console.log("stateValues:", stateValues);
   const dispatch = useDispatch();
 
   return (
