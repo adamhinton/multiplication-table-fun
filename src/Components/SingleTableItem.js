@@ -63,6 +63,7 @@ const StySingleTableItem = styled.li`
 
 const StyPokemonFigure = styled.figure`
   width: 80%;
+  margin: 0;
 `;
 
 const StyDisplayTotal = styled.strong`
@@ -70,5 +71,6 @@ const StyDisplayTotal = styled.strong`
 `;
 
 const TextContainerDiv = styled.div`
+  margin-top: 5px;
   font-size: 14px;
 `;
