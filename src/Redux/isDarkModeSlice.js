@@ -1,26 +1,30 @@
-const TOGGLEDARKMODE = "TOGGLEDARKMODE";
+// When user hits dark mode button in header, this toggles dark mode/light mode, and sets preference in localStorage
+// On page load, this checks localStorage for darkMode preference.
+// DarkMode is set to true by default if user hasn't made selection.
+
+import { TOGGLEDARKMODE } from "./actionNameVariables";
 
 const darkModeToggleReducer = (state, action) => {
   switch (action.type) {
     case TOGGLEDARKMODE: {
-      //toggles isDarkMode boolean
-      setDarkModeLocalStorage(!state);
-      return !action.payload;
+      const { isDarkMode } = action.payload;
+      setDarkModeLocalStorage(!isDarkMode);
+      return !isDarkMode;
     }
+
     default:
-      console.log("isDarkModeStored():", isDarkModeStored());
-      return isDarkModeStored();
+      return storedDarkModePreferenceOrFalse();
   }
 };
 
 export default darkModeToggleReducer;
 
-const isDarkModeStored = () => {
+const storedDarkModePreferenceOrFalse = () => {
   const key = "isDarkMode";
 
   try {
     const item = window.localStorage.getItem(key);
-    return item ? JSON.parse(item) : false;
+    return item ? JSON.parse(item) : true;
   } catch (error) {
     console.log("error getting dark mode preference from localStorage");
     return false;

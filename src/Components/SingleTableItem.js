@@ -5,7 +5,6 @@ import styled from "styled-components";
 
 const SingleTableItem = (props) => {
   const { toBeMultiplied, currentMultiplier, isDisplayPokemon } = props;
-
   const total = toBeMultiplied * currentMultiplier;
 
   // pokedex ids max out at 898,
@@ -20,7 +19,7 @@ const SingleTableItem = (props) => {
       data-testid="single-table-item"
       isDisplayPokemon={isDisplayPokemon}
     >
-      <TextContainerDiv>
+      <TextContainerDiv isDisplayPokemon={isDisplayPokemon}>
         x {currentMultiplier} =<StyDisplayTotal> {total} </StyDisplayTotal>
       </TextContainerDiv>
       {/* contains pokemon img if user has toggled that option */}
@@ -55,15 +54,16 @@ const StySingleTableItem = styled.li`
   text-align: center;
   align-items: center;
   justify-content: center;
-  width: 150px;
+  width: 120px;
   height: ${(props) => {
-    return props.isDisplayPokemon ? "150px" : "auto";
+    return props.isDisplayPokemon ? "120px" : "auto";
   }};
   margin: 0.35%;
 `;
 
 const StyPokemonFigure = styled.figure`
   width: 80%;
+  margin: 0;
 `;
 
 const StyDisplayTotal = styled.strong`
@@ -71,5 +71,8 @@ const StyDisplayTotal = styled.strong`
 `;
 
 const TextContainerDiv = styled.div`
+  margin-top: ${(props) => {
+    return props.isDisplayPokemon ? "10px" : "0";
+  }};
   font-size: 14px;
 `;

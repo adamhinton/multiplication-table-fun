@@ -3,27 +3,28 @@ import styled from "styled-components";
 import { useDispatch } from "react-redux";
 import { useState } from "react";
 import { useSelector } from "react-redux";
+import {
+  NEWMULTIPLIERANDLIMIT,
+  TOGGLEPOKEMONDISPLAYOPTION,
+} from "../Redux/actionNameVariables";
 
 const selectState = (state) => state;
 
 const DisplayOptionsForm = (props) => {
-  //stateValues is pulled from redux state store
   const stateValues = useSelector(selectState);
 
-  //updates any time a form input is changed (before hitting submit)
   const [formValues, setFormValues] = useState(stateValues);
 
   const dispatch = useDispatch();
 
   const onSubmit = (e) => {
-    //updates Redux global state with new multiplier, limit and displayPokemon boolean based on user preferences
     e.preventDefault();
     dispatch({
-      type: "NEWMULTIPLIERANDLIMIT",
+      type: NEWMULTIPLIERANDLIMIT,
       payload: formValues.tableValues,
     });
     dispatch({
-      type: "TOGGLEPOKEMONDISPLAYOPTION",
+      type: TOGGLEPOKEMONDISPLAYOPTION,
       payload: formValues.displayPokemon.isDisplayPokemon,
     });
   };
@@ -114,7 +115,6 @@ const StyForm = styled.form`
   div {
     margin: 3px 0;
   }
-
   background-color: ${({ theme }) => {
     return theme.themeMode.cardBackgroundColor;
   }};
@@ -135,7 +135,6 @@ const StyForm = styled.form`
 
 const StyInput = styled.input`
   width: 75px;
-  /* border: none; */
   color: ${({ theme }) => {
     return theme.themeMode.inputTextColor;
   }};

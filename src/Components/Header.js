@@ -4,11 +4,12 @@ import linkMaker from "../utils/HeaderUtils/linkMaker";
 import { BsMoon, BsSun } from "react-icons/bs";
 import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
+import { TOGGLEDARKMODE } from "../Redux/actionNameVariables";
 
 const selectState = (state) => state;
 
 const Header = () => {
-  const { isDarkMode } = useSelector(selectState);
+  const stateValues = useSelector(selectState);
   const dispatch = useDispatch();
 
   return (
@@ -23,10 +24,10 @@ const Header = () => {
           className="toggle_btn"
           data-testid="toggle_btn"
           onClick={() => {
-            dispatch({ payload: isDarkMode, type: "TOGGLEDARKMODE" });
+            dispatch({ payload: stateValues, type: TOGGLEDARKMODE });
           }}
         >
-          {isDarkMode ? (
+          {stateValues.isDarkMode ? (
             <BsSun color="#ff0" size="24" title="Switch to light mode" />
           ) : (
             <BsMoon size="24" title="Switch to dark mode" />
@@ -47,7 +48,6 @@ const StyHeader = styled.header`
   flex-wrap: wrap;
   align-items: center;
   font-size: 1rem;
-  //TODO: probably make this padding bigger for larger screens
   padding: 0 5%;
   max-width: 1200px;
   margin: auto;

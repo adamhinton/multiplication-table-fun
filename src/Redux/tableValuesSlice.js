@@ -1,4 +1,4 @@
-const NEWMULTIPLIERANDLIMIT = "NEWMULTIPLIERANDLIMIT";
+import { NEWMULTIPLIERANDLIMIT } from "./actionNameVariables";
 
 //This updates state with values that the user inputs through DisplayOptionsForm.js.
 //Multiplier is the number that will be multiplied, limit is the max numbers to be displayed.
