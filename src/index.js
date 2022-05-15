@@ -9,30 +9,19 @@ import { createRoot } from "react-dom/client";
 const container = document.getElementById("app");
 const root = createRoot(container);
 
-const isDarkModeStored = () => {
-  const key = "isDarkMode";
-
-  try {
-    const item = window.localStorage.getItem(key);
-    console.log("item:", item);
-    return item ? JSON.parse(item) : undefined;
-  } catch (error) {
-    return false;
-  }
-};
-
 const initialState = {
   tableValues: {
     multiplier: 10,
     limit: 30,
   },
   displayPokemon: {
-    isDisplayPokemon: isDarkModeStored(),
+    isDisplayPokemon: false,
   },
   isDarkMode: false,
 };
 
 const store = configureStore(initialState);
+console.log("initialState:", initialState);
 
 root.render(
   <Provider store={store}>
