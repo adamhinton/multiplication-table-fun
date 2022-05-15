@@ -1,25 +1,40 @@
 const TOGGLEDARKMODE = "TOGGLEDARKMODE";
 
 const darkModeToggleReducer = (state, action) => {
-  setDarkModePref(state);
-
+  console.log("starting action:", action);
   switch (action.type) {
     case TOGGLEDARKMODE: {
       //toggles isDarkMode boolean
+      setDarkModeLocalStorage(!state);
       return !action.payload;
     }
     default:
-      return false;
+      console.log("isDarkModeStored():", isDarkModeStored());
+      return isDarkModeStored();
   }
 };
 
 export default darkModeToggleReducer;
 
-const setDarkModePref = (state) => {
+const isDarkModeStored = () => {
   const key = "isDarkMode";
 
   try {
-    window.localStorage.setItem(key, !state);
+    const item = window.localStorage.getItem(key);
+
+    console.log("item:", item);
+    return item === "true" ? true : false;
+  } catch (error) {
+    console.log("error");
+    return false;
+  }
+};
+
+const setDarkModeLocalStorage = (isDark) => {
+  const key = "isDarkMode";
+
+  try {
+    window.localStorage.setItem(key, isDark);
   } catch (e) {
     console.error("Error in setting preference");
   }
