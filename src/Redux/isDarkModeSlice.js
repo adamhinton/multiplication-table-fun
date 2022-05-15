@@ -7,14 +7,15 @@ const darkModeToggleReducer = (state, action) => {
       setDarkModeLocalStorage(!isDarkMode);
       return !isDarkMode;
     }
+
     default:
-      return isDarkModeStored();
+      return storedDarkModePreferenceOrFalse();
   }
 };
 
 export default darkModeToggleReducer;
 
-const isDarkModeStored = () => {
+const storedDarkModePreferenceOrFalse = () => {
   const key = "isDarkMode";
 
   try {
