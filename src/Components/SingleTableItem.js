@@ -54,9 +54,9 @@ const StySingleTableItem = styled.li`
   text-align: center;
   align-items: center;
   justify-content: center;
-  width: 150px;
+  width: 120px;
   height: ${(props) => {
-    return props.isDisplayPokemon ? "150px" : "auto";
+    return props.isDisplayPokemon ? "120px" : "auto";
   }};
   margin: 0.35%;
 `;
