@@ -8,7 +8,8 @@ import { useDispatch } from "react-redux";
 const selectState = (state) => state;
 
 const Header = () => {
-  const { isDarkMode } = useSelector(selectState);
+  const stateValues = useSelector(selectState);
+  console.log("stateValues:", stateValues);
   const dispatch = useDispatch();
 
   return (
@@ -23,10 +24,10 @@ const Header = () => {
           className="toggle_btn"
           data-testid="toggle_btn"
           onClick={() => {
-            dispatch({ payload: isDarkMode, type: "TOGGLEDARKMODE" });
+            dispatch({ payload: stateValues, type: "TOGGLEDARKMODE" });
           }}
         >
-          {isDarkMode ? (
+          {stateValues.isDarkMode ? (
             <BsSun color="#ff0" size="24" title="Switch to light mode" />
           ) : (
             <BsMoon size="24" title="Switch to dark mode" />
